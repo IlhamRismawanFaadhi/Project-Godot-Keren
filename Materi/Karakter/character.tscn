@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdxqdd3xc5bvc"]
+
+[ext_resource type="Script" uid="uid://cem2gujtrxurn" path="res://Materi/Karakter/Script/character.gd" id="1_hdnpo"]
+[ext_resource type="PackedScene" uid="uid://bnvq7h05gc1jf" path="res://Assets/3D/Character/NewChar/male.tscn" id="2_evs7v"]
+[ext_resource type="PackedScene" uid="uid://dd0ytimas3u35" path="res://Assets/3D/Character/NewChar/female.tscn" id="3_24pef"]
+
+[node name="Character" type="Node3D"]
+script = ExtResource("1_hdnpo")
+
+[node name="Male" type="Node3D" parent="."]
+visible = false
+
+[node name="Male" parent="Male" instance=ExtResource("2_evs7v")]
+
+[node name="Female" type="Node3D" parent="."]
+
+[node name="Female" parent="Female" instance=ExtResource("3_24pef")]

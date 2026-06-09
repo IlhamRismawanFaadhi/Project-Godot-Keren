@@ -1,0 +1,846 @@
+[gd_scene load_steps=33 format=3 uid="uid://cbdygfdra7vjm"]
+
+[ext_resource type="Theme" uid="uid://dyjqj3xaw6ffc" path="res://UI/Saves/Theme/Menggambar.tres" id="1_gkbhg"]
+[ext_resource type="Script" uid="uid://er8il324xy6a" path="res://Materi/Menggambar/Script/menggambar.gd" id="2_dqwc8"]
+[ext_resource type="Texture2D" uid="uid://ce4fvscccm2uq" path="res://Assets/Sprite/Icon/PNG/Outline/Default/drawing_pencil.png" id="3_uaf3w"]
+[ext_resource type="Texture2D" uid="uid://dxcecanh8urkm" path="res://Assets/Sprite/Icon/PNG/Outline/Default/drawing_eraser.png" id="4_ab5pk"]
+[ext_resource type="Script" uid="uid://cgik28874u7dm" path="res://Materi/Menggambar/Script/area_2d.gd" id="5_wvi2n"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="6_h6yf8"]
+[ext_resource type="Texture2D" uid="uid://d36efpduhbhxt" path="res://Assets/Sprite/Buah/GrafisBuah/fruit/mango.png" id="7_o8jsh"]
+[ext_resource type="Script" uid="uid://bdxwiohpq0a60" path="res://Materi/Menggambar/Script/perfection_area.gd" id="8_u0uqd"]
+[ext_resource type="Script" uid="uid://djgc6jqj5i6aj" path="res://Materi/Menggambar/Script/get_trigger.gd" id="9_0fnrs"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="10_wty45"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="11_cav78"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="12_si07k"]
+
+[sub_resource type="Gradient" id="Gradient_lorbd"]
+offsets = PackedFloat32Array(0.15, 0.34)
+colors = PackedColorArray(0.904016, 0.79841, 0.683613, 1, 0.858824, 0.72549, 0.572549, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_c1uea"]
+frequency = 0.0053
+fractal_type = 3
+fractal_octaves = 1
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0d4mh"]
+width = 1024
+height = 1024
+seamless = true
+color_ramp = SubResource("Gradient_lorbd")
+noise = SubResource("FastNoiseLite_c1uea")
+
+[sub_resource type="Gradient" id="Gradient_4odtt"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.7)
+colors = PackedColorArray(0, 0, 0, 0.34902, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qgsqu"]
+gradient = SubResource("Gradient_4odtt")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_kq3n1"]
+offsets = PackedFloat32Array(0.944444, 1)
+colors = PackedColorArray(0.439216, 0.6, 1, 1, 0.439216, 0.6, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b1hhl"]
+gradient = SubResource("Gradient_kq3n1")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_hvy5o"]
+offsets = PackedFloat32Array(0.944444, 1)
+colors = PackedColorArray(0.980392, 0.890196, 0.501961, 1, 0.980392, 0.890196, 0.501961, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lxnlj"]
+gradient = SubResource("Gradient_hvy5o")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_c8neo"]
+offsets = PackedFloat32Array(0.886364, 1)
+colors = PackedColorArray(0.92549, 0.380392, 0.4, 1, 0.92549, 0.380392, 0.4, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_51qeh"]
+gradient = SubResource("Gradient_c8neo")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_trduk"]
+offsets = PackedFloat32Array(0.886364, 1)
+colors = PackedColorArray(0.294118, 0.847059, 0.290196, 1, 0.294118, 0.847059, 0.290196, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ij6bv"]
+gradient = SubResource("Gradient_trduk")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_fwxwu"]
+offsets = PackedFloat32Array(0.886364, 1)
+colors = PackedColorArray(0.321569, 0.321569, 0.321569, 1, 0.321569, 0.321569, 0.321569, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ji7jr"]
+gradient = SubResource("Gradient_fwxwu")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_7j11v"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.181818, 0.920455)
+colors = PackedColorArray(1, 1, 1, 1, 0.996078, 0.619608, 0.552941, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e6kb5"]
+gradient = SubResource("Gradient_7j11v")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1sr8g"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cx27y"]
+radius = 25.807
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lht2l"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="Menggambar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gkbhg")
+script = ExtResource("2_dqwc8")
+metadata/_edit_lock_ = true
+
+[node name="Bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.951756, 0.899482, 0.840384, 1)
+metadata/_edit_lock_ = true
+
+[node name="BGTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 1024.0
+scale = Vector2(2.34412, 1.05736)
+texture = SubResource("NoiseTexture2D_0d4mh")
+metadata/_edit_lock_ = true
+
+[node name="Canvas2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -785.0
+offset_top = -941.0
+offset_right = 815.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(762, 404)
+color = Color(0.450648, 0.450648, 0.450648, 0.372549)
+metadata/_edit_lock_ = true
+
+[node name="Canvas3" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -960.0
+offset_right = 800.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(762, 404)
+metadata/_edit_lock_ = true
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="Lines"]
+visible = false
+points = PackedVector2Array(1656, 32, 1600, 160, 752, 176)
+default_color = Color(0, 0, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="ColorPallete" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -396.0
+offset_right = -40.0
+offset_bottom = 420.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button2" type="TextureRect" parent="ColorPallete"]
+visible = false
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -32.0
+offset_right = 68.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Shadow" type="VBoxContainer" parent="ColorPallete"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = 9.0
+offset_right = 72.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Button2" type="TextureRect" parent="ColorPallete/Shadow"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Button3" type="TextureRect" parent="ColorPallete/Shadow"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Button4" type="TextureRect" parent="ColorPallete/Shadow"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Button5" type="TextureRect" parent="ColorPallete/Shadow"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Button6" type="TextureRect" parent="ColorPallete/Shadow"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_qgsqu")
+
+[node name="Button" type="VBoxContainer" parent="ColorPallete"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Blue" type="TextureButton" parent="ColorPallete/Button"]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_b1hhl")
+texture_pressed = SubResource("GradientTexture2D_b1hhl")
+texture_hover = SubResource("GradientTexture2D_b1hhl")
+texture_disabled = SubResource("GradientTexture2D_b1hhl")
+texture_focused = SubResource("GradientTexture2D_b1hhl")
+
+[node name="Yelow" type="TextureButton" parent="ColorPallete/Button"]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_lxnlj")
+texture_pressed = SubResource("GradientTexture2D_lxnlj")
+texture_hover = SubResource("GradientTexture2D_lxnlj")
+texture_disabled = SubResource("GradientTexture2D_lxnlj")
+texture_focused = SubResource("GradientTexture2D_lxnlj")
+
+[node name="Red" type="TextureButton" parent="ColorPallete/Button"]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_51qeh")
+texture_pressed = SubResource("GradientTexture2D_51qeh")
+texture_hover = SubResource("GradientTexture2D_51qeh")
+texture_disabled = SubResource("GradientTexture2D_51qeh")
+texture_focused = SubResource("GradientTexture2D_51qeh")
+
+[node name="Green" type="TextureButton" parent="ColorPallete/Button"]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_ij6bv")
+texture_pressed = SubResource("GradientTexture2D_ij6bv")
+texture_hover = SubResource("GradientTexture2D_ij6bv")
+texture_disabled = SubResource("GradientTexture2D_ij6bv")
+texture_focused = SubResource("GradientTexture2D_ij6bv")
+
+[node name="Black" type="TextureButton" parent="ColorPallete/Button"]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_ji7jr")
+texture_pressed = SubResource("GradientTexture2D_ji7jr")
+texture_hover = SubResource("GradientTexture2D_ji7jr")
+texture_disabled = SubResource("GradientTexture2D_ji7jr")
+texture_focused = SubResource("GradientTexture2D_ji7jr")
+
+[node name="TextureButton2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 238.0
+offset_right = 254.0
+offset_bottom = 302.0
+rotation = 0.330804
+scale = Vector2(1.55902, 3.59849)
+pivot_offset = Vector2(32, 32)
+color = Color(0, 0, 0, 0.156863)
+
+[node name="Penghapus" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 225.0
+offset_right = 248.0
+offset_bottom = 289.0
+rotation = 0.330804
+scale = Vector2(1.55902, 3.59849)
+pivot_offset = Vector2(32, 32)
+texture_normal = SubResource("GradientTexture2D_e6kb5")
+texture_pressed = SubResource("GradientTexture2D_e6kb5")
+texture_hover = SubResource("GradientTexture2D_e6kb5")
+texture_disabled = SubResource("GradientTexture2D_e6kb5")
+texture_focused = SubResource("GradientTexture2D_e6kb5")
+
+[node name="Mouse_follower" type="Marker2D" parent="."]
+
+[node name="Pen" type="TextureRect" parent="Mouse_follower"]
+offset_right = 57.0
+offset_bottom = 57.0
+texture = ExtResource("3_uaf3w")
+
+[node name="Penghapus" type="TextureRect" parent="Mouse_follower"]
+visible = false
+offset_right = 57.0
+offset_bottom = 57.0
+texture = ExtResource("4_ab5pk")
+
+[node name="Area2D" type="Area2D" parent="Mouse_follower"]
+script = ExtResource("5_wvi2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse_follower/Area2D"]
+shape = SubResource("CircleShape2D_1sr8g")
+
+[node name="VSlider" type="VSlider" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 140.0
+offset_top = 577.0
+offset_right = 316.0
+offset_bottom = 948.0
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Button" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("6_h6yf8")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = 332.0
+offset_right = -400.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Berikutnya"
+get_win = true
+next_level = "res://Scnee/Level/Buah/Level 3/Menggambar_Buah_2.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="Drawing" type="Node2D" parent="."]
+position = Vector2(1219, 577)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Drawing"]
+modulate = Color(1, 1, 1, 0.168627)
+scale = Vector2(1.04096, 1.04096)
+texture = ExtResource("7_o8jsh")
+
+[node name="PerfectionArea" type="Node2D" parent="Drawing"]
+script = ExtResource("8_u0uqd")
+
+[node name="GetTrigger" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger2" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger2"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger3" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger3"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger4" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, -193)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger4"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger6" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, -321)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger6"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger12" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, 263)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger12"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger13" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, 199)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger13"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger14" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger14"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger15" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(0, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger15"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger9" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, 0)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger9"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger16" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger16"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger17" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger17"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger18" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, -193)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger18"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger25" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, 263)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger25"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger26" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, 199)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger26"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger27" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger27"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger28" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-67, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger28"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger29" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, 0)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger29"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger30" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger30"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger31" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger31"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger39" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, 263)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger39"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger40" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, 199)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger40"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger41" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger41"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger42" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-131, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger42"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger53" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(-195, 263)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger53"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger183" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, 0)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger183"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger184" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger184"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger185" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger185"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger186" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, -193)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger186"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger187" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, -257)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger187"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger193" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, 263)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger193"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger194" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, 199)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger194"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger195" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger195"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger196" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(61, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger196"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger197" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, 0)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger197"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger198" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger198"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger199" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger199"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger200" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, -193)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger200"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger201" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, -257)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger201"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger202" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, -321)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger202"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger208" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, 199)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger208"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger209" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger209"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger210" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(125, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger210"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger211" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, 0)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger211"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger212" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, -65)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger212"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger213" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, -129)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger213"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger215" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, -257)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger215"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger216" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, -321)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger216"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger223" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, 135)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger223"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="GetTrigger224" type="StaticBody2D" parent="Drawing/PerfectionArea" groups=["PerfectioAarea"]]
+position = Vector2(189, 71)
+script = ExtResource("9_0fnrs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawing/PerfectionArea/GetTrigger224"]
+shape = SubResource("CircleShape2D_cx27y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("10_wty45")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_lht2l")
+expand_icon = false
+path_to = "res://Scnee/Level/Buah/KotaBuah/kota_buah.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("11_cav78")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("12_si07k")])
+on_start_dialogue = false
+change_scnee_end = true
+
+[connection signal="pressed" from="ColorPallete/Button/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="ColorPallete/Button/Yelow" to="." method="_on_yelow_pressed"]
+[connection signal="pressed" from="ColorPallete/Button/Red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="ColorPallete/Button/Green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="ColorPallete/Button/Black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="Penghapus" to="." method="_on_penghapus_pressed"]
+[connection signal="body_entered" from="Mouse_follower/Area2D" to="Mouse_follower/Area2D" method="_on_body_entered"]

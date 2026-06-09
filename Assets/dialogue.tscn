@@ -1,0 +1,258 @@
+[gd_scene load_steps=16 format=3 uid="uid://bc2ptk5lt4xca"]
+
+[ext_resource type="Script" uid="uid://b3fg8dx5ynd8b" path="res://Scnee/Dialog/dialogue.gd" id="1_lnuv8"]
+[ext_resource type="PackedScene" uid="uid://bdxqdd3xc5bvc" path="res://Materi/Karakter/character.tscn" id="1_p5iom"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="2_yefym"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yefym"]
+viewport_path = NodePath("Control/TextureRect/CanvasLayer/SubViewport")
+
+[sub_resource type="Gradient" id="Gradient_lnuv8"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hd2m6"]
+gradient = SubResource("Gradient_lnuv8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lnuv8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_nen8p"]
+sky_material = SubResource("ProceduralSkyMaterial_lnuv8")
+
+[sub_resource type="Environment" id="Environment_hd2m6"]
+background_mode = 1
+background_color = Color(0.676939, 0.585603, 0.523374, 1)
+background_energy_multiplier = 3.2
+sky = SubResource("Sky_nen8p")
+ambient_light_energy = 0.0
+tonemap_mode = 3
+tonemap_white = 4.05
+fog_light_color = Color(0.711408, 0.508536, 0.0838396, 1)
+fog_light_energy = 2.05
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnuv8"]
+bg_color = Color(0.979137, 0.960152, 0.957048, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+expand_margin_left = 50.0
+expand_margin_top = 25.0
+expand_margin_right = 50.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_hd2m6"]
+font = ExtResource("2_yefym")
+font_size = 54
+
+[sub_resource type="LabelSettings" id="LabelSettings_yefym"]
+font = ExtResource("2_yefym")
+font_size = 54
+font_color = Color(0.288518, 0.288518, 0.288518, 1)
+
+[sub_resource type="Animation" id="Animation_hd2m6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect/LabelBackground:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/TextureRect/Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1040)]
+}
+
+[sub_resource type="Animation" id="Animation_lnuv8"]
+resource_name = "in"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect/LabelBackground:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/TextureRect/Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.62),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-527, 1040), Vector2(0, 1040)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6pk5g"]
+_data = {
+&"RESET": SubResource("Animation_hd2m6"),
+&"in": SubResource("Animation_lnuv8")
+}
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_lnuv8")
+array_dialog = Array[String](["Selamat datang di. Permainan Digital Ainun Habibi. ", "Disini kamu bisa memilih banyak tema belajar. ", "Dengan memilih kartu tema yang ada di sini. "])
+reveal_speed = 0.005
+text_display_time = 5.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 10.0
+offset_top = -460.0
+offset_right = 936.0
+offset_bottom = 933.0
+scale = Vector2(0.347735, 0.347735)
+texture = SubResource("ViewportTexture_yefym")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = -54.0
+offset_right = 180.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(5.39164, 1.23661)
+pivot_offset = Vector2(32, 32)
+texture = SubResource("GradientTexture2D_hd2m6")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_top = -468.0
+offset_right = 926.0
+offset_bottom = 925.0
+scale = Vector2(0.347735, 0.347735)
+texture = SubResource("ViewportTexture_yefym")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control/TextureRect"]
+
+[node name="SubViewport" type="SubViewport" parent="Control/TextureRect/CanvasLayer"]
+transparent_bg = true
+size = Vector2i(632, 952)
+
+[node name="Character" parent="Control/TextureRect/CanvasLayer/SubViewport" instance=ExtResource("1_p5iom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2736, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Control/TextureRect/CanvasLayer/SubViewport/Character"]
+transform = Transform3D(1, 0, 0, 0, 0.99142, 0.130717, 0, -0.130717, 0.99142, 0, 2.88241, 5.24673)
+projection = 1
+size = 4.42243
+
+[node name="Enviroment" type="Node3D" parent="Control/TextureRect/CanvasLayer/SubViewport"]
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Control/TextureRect/CanvasLayer/SubViewport/Enviroment"]
+environment = SubResource("Environment_hd2m6")
+
+[node name="LabelBackground" type="Label" parent="Control/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1117.43
+offset_top = -0.000518799
+offset_right = 1225.43
+offset_bottom = 75.9997
+scale = Vector2(2.7215, 2.7215)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnuv8")
+label_settings = SubResource("LabelSettings_hd2m6")
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/TextureRect/LabelBackground"]
+modulate = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-47, 26, -95, 158, 1, 98)
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+z_as_relative = false
+layout_mode = 0
+offset_left = 1070.87
+offset_top = -46.5597
+offset_right = 1178.87
+offset_bottom = 29.4406
+scale = Vector2(2.7215, 2.7215)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnuv8")
+label_settings = SubResource("LabelSettings_yefym")
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/TextureRect/Label"]
+color = Color(0.980392, 0.960784, 0.956863, 1)
+polygon = PackedVector2Array(-47, 26, -95, 158, 1, 98)
+
+[node name="TimerWait" type="Timer" parent="."]
+
+[node name="AudioPercakapan" type="AudioStreamPlayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6pk5g")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

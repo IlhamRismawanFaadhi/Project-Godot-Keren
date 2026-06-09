@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbmapiqxrqr34"]
+
+[sub_resource type="Gradient" id="Gradient_v3rrf"]
+offsets = PackedFloat32Array(0, 0.68)
+colors = PackedColorArray(0.890196, 0.631373, 0.4, 1, 0.92549, 0.678431, 0.431373, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w826c"]
+frequency = 0.0373
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bkc4r"]
+height = 352
+noise = SubResource("FastNoiseLite_w826c")
+color_ramp = SubResource("Gradient_v3rrf")
+
+[sub_resource type="Gradient" id="Gradient_sws3y"]
+offsets = PackedFloat32Array(0.684783, 0.717391)
+colors = PackedColorArray(0.945098, 0.741176, 0.517647, 0, 0.945098, 0.741176, 0.517647, 0.4)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q8mmw"]
+frequency = 0.0016
+offset = Vector3(580.1, 0.95, 0)
+fractal_type = 2
+fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a3ugs"]
+height = 352
+noise = SubResource("FastNoiseLite_q8mmw")
+color_ramp = SubResource("Gradient_sws3y")
+
+[node name="Woodl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.831373, 0.556863, 0.313726, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_bkc4r")
+
+[node name="TextureRect4" type="TextureRect" parent="VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_a3ugs")
+flip_h = true
+flip_v = true
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_bkc4r")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="VBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_a3ugs")
+
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_bkc4r")
+flip_v = true
+
+[node name="TextureRect5" type="TextureRect" parent="VBoxContainer/TextureRect3"]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_a3ugs")
+flip_h = true

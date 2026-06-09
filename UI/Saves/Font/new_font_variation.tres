@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bunmsetoica12"]
+
+[ext_resource type="FontFile" uid="uid://lcbd8gybahvf" path="res://Assets/Font/Poppins/Poppins-Black.ttf" id="1_ih4nw"]
+
+[resource]
+base_font = ExtResource("1_ih4nw")
+variation_embolden = 0.08
+spacing_glyph = 2

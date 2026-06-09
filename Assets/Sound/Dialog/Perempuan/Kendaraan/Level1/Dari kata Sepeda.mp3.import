@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwcinnsrdqowg"
+path="res://.godot/imported/Dari kata Sepeda.mp3-27ff07765b8b1e2ceb94a35a48413642.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Kendaraan/Level1/Dari kata Sepeda.mp3"
+dest_files=["res://.godot/imported/Dari kata Sepeda.mp3-27ff07765b8b1e2ceb94a35a48413642.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

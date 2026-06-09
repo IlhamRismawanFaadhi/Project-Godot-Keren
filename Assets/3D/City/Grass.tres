@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ca1e3bliolbtq"]
+
+[ext_resource type="Texture2D" uid="uid://d243rdnn4lxx6" path="res://Assets/Sprite/Patren/Vector/pattern_56.svg" id="1_kgtka"]
+
+[resource]
+albedo_color = Color(0.343809, 0.519008, 0.253318, 1)
+metallic = 0.58
+metallic_specular = 0.0
+metallic_texture = ExtResource("1_kgtka")
+emission_texture = ExtResource("1_kgtka")
+uv1_scale = Vector3(11.18, 9.261, 9.374)

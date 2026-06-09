@@ -1,0 +1,1259 @@
+[gd_scene load_steps=38 format=3 uid="uid://db3wjt63vx21h"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_pa3tn"]
+[ext_resource type="Shader" uid="uid://crlyuhkwcvb8k" path="res://Scnee/Level/Matematika/Level2/Script/TextureScrolling.gdshader" id="2_qrbxo"]
+[ext_resource type="Theme" uid="uid://24lxa353fuhq" path="res://UI/Saves/Theme/DragAnDropMatematika2.tres" id="3_hiovg"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="4_xw45f"]
+[ext_resource type="Theme" uid="uid://c5xvqahtiekrv" path="res://UI/Saves/Theme/DragAnDropKendaraan.tres" id="5_f2xbv"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="6_lrlph"]
+[ext_resource type="Texture2D" uid="uid://jnlvil2a0bui" path="res://Assets/Sprite/Hewan/AnimalFrame/Bear.png" id="7_0gnff"]
+[ext_resource type="Texture2D" uid="uid://g8sgu35on3pg" path="res://Assets/Sprite/Benda/Auto.png" id="8_pa3tn"]
+[ext_resource type="Texture2D" uid="uid://txcv4jwby670" path="res://Assets/Sprite/Benda/Boat.png" id="9_qrbxo"]
+[ext_resource type="Texture2D" uid="uid://1jug866jhwwl" path="res://Assets/Sprite/Benda/Bus.png" id="10_hiovg"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="11_4jr1f"]
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="12_kavkx"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="13_qrbxo"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="14_xw45f"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="15_f2xbv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvvcl"]
+shader = ExtResource("2_qrbxo")
+shader_parameter/speed = 0.0
+
+[sub_resource type="Gradient" id="Gradient_5qgci"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.271739, 0.853261)
+colors = PackedColorArray(0.683077, 0.683077, 0.683077, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xtfgj"]
+gradient = SubResource("Gradient_5qgci")
+width = 129
+height = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ye26"]
+bg_color = Color(0.984314, 0.847059, 0.647059, 0)
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+border_color = Color(0.684963, 0.614704, 0.388066, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 29.0
+expand_margin_top = 29.0
+expand_margin_right = 29.0
+expand_margin_bottom = 29.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_size = 50
+shadow_offset = Vector2(11.24, 10.555)
+anti_aliasing_size = 3.039
+
+[sub_resource type="Gradient" id="Gradient_m7bet"]
+offsets = PackedFloat32Array(0, 0.369565)
+colors = PackedColorArray(0.945645, 0.726926, 0.513598, 1, 0.914326, 0.67161, 0.461287, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qjljy"]
+noise_type = 2
+frequency = 0.1175
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cgbp5"]
+height = 352
+color_ramp = SubResource("Gradient_m7bet")
+noise = SubResource("FastNoiseLite_qjljy")
+
+[sub_resource type="Gradient" id="Gradient_jgdju"]
+offsets = PackedFloat32Array(0.532609, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.113725)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ccqaq"]
+gradient = SubResource("Gradient_jgdju")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_feodp"]
+font = ExtResource("6_lrlph")
+font_size = 126
+font_color = Color(0.533333, 0.262745, 0.94902, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ld4of"]
+font = ExtResource("6_lrlph")
+font_size = 126
+font_color = Color(0.976471, 0.827451, 0.443137, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ytaf1"]
+font = ExtResource("6_lrlph")
+font_size = 126
+font_color = Color(0.956863, 0.45098, 0.25098, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ye26"]
+load_path = "res://.godot/imported/Monkey.png-703d0471b6b2c5ec954480bd5f1411c4.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_770kq"]
+bg_color = Color(0.983263, 0.907115, 0.834831, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.449088, 0.709461, 0.562783, 1)
+corner_radius_top_left = 1
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.270588)
+shadow_size = 15
+shadow_offset = Vector2(7.065, 11.035)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("6_lrlph")
+font_size = 54
+font_color = Color(0.309804, 0.313726, 0.313726, 1)
+
+[sub_resource type="Gradient" id="Gradient_x33em"]
+offsets = PackedFloat32Array(0.652174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.298039)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wf8wh"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xtfgj"]
+color_ramp = SubResource("Gradient_x33em")
+noise = SubResource("FastNoiseLite_wf8wh")
+
+[sub_resource type="Gradient" id="Gradient_47e1k"]
+offsets = PackedFloat32Array(0.540179, 1)
+colors = PackedColorArray(0.154725, 0.508922, 0, 0, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y4fjp"]
+gradient = SubResource("Gradient_47e1k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hiovg"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pa3tn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.782912, 0.527085, 0.801846, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.372549)
+material = SubResource("ShaderMaterial_lvvcl")
+layout_mode = 0
+offset_right = 1848.0
+offset_bottom = 831.0
+scale = Vector2(1.299, 1.299)
+texture = SubResource("GradientTexture2D_xtfgj")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="PapanTulis" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -820.0
+offset_top = -492.0
+offset_right = 932.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ye26")
+
+[node name="TextureRect" type="TextureRect" parent="PapanTulis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_cgbp5")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="PapanTulis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ccqaq")
+metadata/_edit_lock_ = true
+
+[node name="ButtonDrag" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 203.0
+offset_top = 1040.0
+offset_right = 471.0
+offset_bottom = 1396.0
+theme = ExtResource("3_hiovg")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_xw45f")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = -895.0
+offset_right = 502.0
+offset_bottom = -767.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka")
+
+[node name="Panel" type="Panel" parent="ButtonDrag/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -69.0
+offset_right = 69.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_f2xbv")
+
+[node name="Label" type="Label" parent="ButtonDrag/Button/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -89.1948
+offset_right = 38.5
+offset_bottom = 88.8052
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_xw45f")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = -631.0
+offset_right = 502.0
+offset_bottom = -503.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka3")
+
+[node name="Panel" type="Panel" parent="ButtonDrag/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -69.0
+offset_right = 69.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_f2xbv")
+
+[node name="Label" type="Label" parent="ButtonDrag/Button2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -89.1948
+offset_right = 40.0
+offset_bottom = 88.8052
+grow_horizontal = 2
+grow_vertical = 2
+text = "4"
+label_settings = SubResource("LabelSettings_ld4of")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_xw45f")]
+layout_mode = 0
+offset_left = 374.0
+offset_top = -375.0
+offset_right = 502.0
+offset_bottom = -247.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka2")
+
+[node name="Panel" type="Panel" parent="ButtonDrag/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -69.0
+offset_right = 69.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_f2xbv")
+
+[node name="Label" type="Label" parent="ButtonDrag/Button3/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -89.1948
+offset_right = 25.0
+offset_bottom = 88.8052
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.00847)
+text = "3"
+label_settings = SubResource("LabelSettings_ytaf1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Jawaban" type="Control" parent="."]
+z_index = 1
+anchors_preset = 0
+offset_left = 86.0
+offset_top = 1040.0
+offset_right = 126.0
+offset_bottom = 1080.0
+theme = ExtResource("3_hiovg")
+
+[node name="Angka" type="Sprite2D" parent="Jawaban"]
+z_index = 1
+position = Vector2(1465, -831)
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Button" type="Button" parent="Jawaban/Angka"]
+offset_left = -55.0
+offset_top = -56.0
+offset_right = 54.0
+offset_bottom = 56.0
+pivot_offset = Vector2(54.5, 56)
+theme = ExtResource("5_f2xbv")
+text = "   <   "
+
+[node name="Marker2D10" type="Marker2D" parent="Jawaban/Angka"]
+position = Vector2(179, -130.71)
+rotation = 0.141518
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka/Marker2D10"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka/Marker2D10"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka/Marker2D10"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(0.446863, 0.632977, 0.897991, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka/Marker2D10"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_pa3tn")
+expand_mode = 1
+
+[node name="Marker2D11" type="Marker2D" parent="Jawaban/Angka"]
+position = Vector2(330, -130.71)
+rotation = 0.141518
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka/Marker2D11"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka/Marker2D11"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka/Marker2D11"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(0.446863, 0.632977, 0.897991, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka/Marker2D11"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_pa3tn")
+expand_mode = 1
+
+[node name="Marker2D12" type="Marker2D" parent="Jawaban/Angka"]
+position = Vector2(476, -128.71)
+rotation = 0.141518
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka/Marker2D12"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka/Marker2D12"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka/Marker2D12"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(0.446863, 0.632977, 0.897991, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka/Marker2D12"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_pa3tn")
+expand_mode = 1
+
+[node name="Marker2D14" type="Marker2D" parent="Jawaban/Angka"]
+position = Vector2(223.29, 19.2898)
+rotation = 0.141518
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka/Marker2D14"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka/Marker2D14"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka/Marker2D14"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(0.446863, 0.632977, 0.897991, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka/Marker2D14"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_pa3tn")
+expand_mode = 1
+
+[node name="Marker2D15" type="Marker2D" parent="Jawaban/Angka"]
+position = Vector2(369.29, 21.2898)
+rotation = 0.141518
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka/Marker2D15"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka/Marker2D15"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka/Marker2D15"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(0.446863, 0.632977, 0.897991, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka/Marker2D15"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_pa3tn")
+expand_mode = 1
+
+[node name="Angka2" type="Sprite2D" parent="Jawaban"]
+z_index = 1
+position = Vector2(1465, -567)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka2" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Button" type="Button" parent="Jawaban/Angka2"]
+offset_left = -55.0
+offset_top = -56.0
+offset_right = 54.0
+offset_bottom = 56.0
+pivot_offset = Vector2(54.5, 56)
+theme = ExtResource("5_f2xbv")
+text = "   <   "
+
+[node name="Marker2D13" type="Marker2D" parent="Jawaban/Angka2"]
+position = Vector2(179, -74.25)
+rotation = -0.198694
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka2/Marker2D13"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka2/Marker2D13"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka2/Marker2D13"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.783102, 0.769228, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka2/Marker2D13"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("9_qrbxo")
+expand_mode = 1
+
+[node name="Marker2D14" type="Marker2D" parent="Jawaban/Angka2"]
+position = Vector2(330, -74.25)
+rotation = -0.198694
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka2/Marker2D14"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka2/Marker2D14"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka2/Marker2D14"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.783102, 0.769228, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka2/Marker2D14"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("9_qrbxo")
+expand_mode = 1
+
+[node name="Marker2D15" type="Marker2D" parent="Jawaban/Angka2"]
+position = Vector2(484, -74.25)
+rotation = -0.198694
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka2/Marker2D15"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka2/Marker2D15"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka2/Marker2D15"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.783102, 0.769228, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka2/Marker2D15"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("9_qrbxo")
+expand_mode = 1
+
+[node name="Angka3" type="Sprite2D" parent="Jawaban"]
+z_index = 1
+position = Vector2(1465, -311)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka3" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Button" type="Button" parent="Jawaban/Angka3"]
+offset_left = -55.0
+offset_top = -56.0
+offset_right = 54.0
+offset_bottom = 56.0
+pivot_offset = Vector2(54.5, 56)
+theme = ExtResource("5_f2xbv")
+text = "   <   "
+
+[node name="Marker2D16" type="Marker2D" parent="Jawaban/Angka3"]
+position = Vector2(179, -147.523)
+rotation = 0.160544
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka3/Marker2D16"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka3/Marker2D16"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka3/Marker2D16"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.41314, 0.281104, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka3/Marker2D16"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("10_hiovg")
+expand_mode = 1
+
+[node name="Marker2D17" type="Marker2D" parent="Jawaban/Angka3"]
+position = Vector2(333, -147.523)
+rotation = 0.160544
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka3/Marker2D17"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka3/Marker2D17"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka3/Marker2D17"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.41314, 0.281104, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka3/Marker2D17"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("10_hiovg")
+expand_mode = 1
+
+[node name="Marker2D20" type="Marker2D" parent="Jawaban/Angka3"]
+position = Vector2(253.477, 18.2043)
+rotation = 0.160544
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka3/Marker2D20"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka3/Marker2D20"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka3/Marker2D20"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.41314, 0.281104, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka3/Marker2D20"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("10_hiovg")
+expand_mode = 1
+
+[node name="Marker2D21" type="Marker2D" parent="Jawaban/Angka3"]
+position = Vector2(409.477, 18.2043)
+rotation = 0.160544
+scale = Vector2(1.175, 1.175)
+
+[node name="TextureRect4" type="TextureRect" parent="Jawaban/Angka3/Marker2D21"]
+modulate = Color(0, 0, 0, 0.270588)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 127.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_0gnff")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Jawaban/Angka3/Marker2D21"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = SubResource("CompressedTexture2D_7ye26")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Jawaban/Angka3/Marker2D21"]
+offset_left = -47.0
+offset_top = 10.0
+offset_right = 49.0
+offset_bottom = 111.0
+color = Color(1, 0.41314, 0.281104, 1)
+
+[node name="TextureRect7" type="TextureRect" parent="Jawaban/Angka3/Marker2D21"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.811
+offset_right = 114.189
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.497251, 0.497251)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("10_hiovg")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -2259.0
+offset_top = 65.0
+offset_right = -1659.0
+offset_bottom = 362.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_770kq")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 86.0
+offset_right = 703.0
+offset_bottom = 362.0
+text = "Sambugkan Soal
+Dengan Jawaban
+Yang Sesuai"
+label_settings = SubResource("LabelSettings_gx5gw")
+
+[node name="NextButton" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("11_4jr1f")]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -172.0
+offset_right = 447.0
+offset_bottom = -37.0
+grow_vertical = 0
+pivot_offset = Vector2(372, 67)
+theme = ExtResource("3_hiovg")
+text = "Lanjut"
+icon = ExtResource("12_kavkx")
+icon_alignment = 2
+expand_icon = true
+get_win = true
+next_level = "res://Scnee/Level/Kendaraan/Level2/winner_kendaraan_2.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_xtfgj")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_y4fjp")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("13_qrbxo")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_hiovg")
+expand_icon = false
+path_to = "res://Scnee/Level/Kendaraan/KotaKendaraan/kota_kendaraan.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("14_xw45f")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("15_f2xbv")])
+on_start_dialogue = false
+change_scnee_end = true

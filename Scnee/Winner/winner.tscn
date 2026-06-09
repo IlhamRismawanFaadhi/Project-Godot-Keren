@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=3 uid="uid://bf0bwxxrp3mld"]
+
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="1_77l28"]
+[ext_resource type="Script" uid="uid://dc7rvrq5284la" path="res://Scnee/Winner/Script/winner.gd" id="1_xtlgg"]
+[ext_resource type="Texture2D" uid="uid://534ikyuqqmrw" path="res://Assets/Sprite/Icon/PNG/2x/trophy.png" id="2_40e6t"]
+[ext_resource type="Texture2D" uid="uid://byrrc6145rjec" path="res://Assets/Sprite/Icon/PNG/2x/locked.png" id="4_mr3kh"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="5_o4tb0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoflx"]
+bg_color = Color(0.478775, 0.653786, 0.476728, 1)
+border_width_bottom = 15
+border_color = Color(0.618913, 0.791509, 0.61764, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf48a"]
+bg_color = Color(0.470588, 0.52549, 0.780392, 1)
+border_width_bottom = 15
+border_color = Color(0.662745, 0.709804, 0.87451, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccwhb"]
+bg_color = Color(0.996369, 0.329156, 0.416406, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.820354, 0.814118, 0.617346, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_offset = Vector2(-7.995, 16.05)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p7m1"]
+font = ExtResource("5_o4tb0")
+font_size = 51
+font_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xtlgg")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.94902, 0.94902, 1)
+metadata/_edit_lock_ = true
+
+[node name="Button" parent="." instance=ExtResource("1_77l28")]
+custom_minimum_size = Vector2(352.74, 148.555)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -103.0
+offset_right = 259.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hoflx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf48a")
+text = ""
+icon = ExtResource("2_40e6t")
+icon_alignment = 1
+expand_icon = true
+get_win = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -109.0
+offset_right = 260.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ccwhb")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -76.0
+offset_right = 176.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_mr3kh")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -111.0
+offset_right = 920.0
+offset_bottom = 111.0
+grow_vertical = 2
+text = "Goyangkan HP 
+mu untuk membuka 
+piala yang terkunci ini"
+label_settings = SubResource("LabelSettings_0p7m1")

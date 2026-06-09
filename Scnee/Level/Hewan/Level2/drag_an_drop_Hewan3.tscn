@@ -1,0 +1,1367 @@
+[gd_scene load_steps=51 format=3 uid="uid://dhwfwj8uqroqe"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_fxe6j"]
+[ext_resource type="Shader" uid="uid://crlyuhkwcvb8k" path="res://Scnee/Level/Matematika/Level2/Script/TextureScrolling.gdshader" id="2_71w7x"]
+[ext_resource type="Texture2D" uid="uid://cwrfwiqgyra4u" path="res://Assets/Sprite/Icon/PNG/2x/cross.png" id="3_m2jyo"]
+[ext_resource type="Theme" uid="uid://24lxa353fuhq" path="res://UI/Saves/Theme/DragAnDropMatematika2.tres" id="4_oiic1"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="5_280fc"]
+[ext_resource type="Texture2D" uid="uid://jnlvil2a0bui" path="res://Assets/Sprite/Hewan/AnimalFrame/Bear.png" id="6_5t0xp"]
+[ext_resource type="Texture2D" uid="uid://cct48adclfqqx" path="res://Assets/Sprite/Hewan/AnimalFrame/Cat 4.png" id="7_7mts5"]
+[ext_resource type="Texture2D" uid="uid://c7uaos0hn70x2" path="res://Assets/Sprite/Hewan/AnimalFrame/Chicken.png" id="8_s4lna"]
+[ext_resource type="Texture2D" uid="uid://buaeu8dohwb5p" path="res://Assets/Sprite/Hewan/AnimalFrame/Sheep.png" id="9_2hnpm"]
+[ext_resource type="Texture2D" uid="uid://6g5pbvqlkgt6" path="res://Assets/Sprite/Hewan/AnimalFrame/Pig.png" id="10_oo383"]
+[ext_resource type="Theme" uid="uid://c4buxydcuiucc" path="res://UI/Saves/Theme/DragAnDropHewan.tres" id="11_ub6ex"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="12_ps004"]
+[ext_resource type="Script" uid="uid://dnf3epe0r3fo2" path="res://Scnee/Level/Buah/Level2/label_4.gd" id="13_32nfx"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="13_80360"]
+[ext_resource type="Script" uid="uid://twyc7gmb8i38" path="res://Scnee/Level/Matematika/Level2/Script/animation_player.gd" id="14_y085o"]
+[ext_resource type="AudioStream" uid="uid://bq2brrytbgajk" path="res://Assets/Sound/Dialog/Perempuan/Hewan/Level2/Kucing.mp3" id="14_ymnbx"]
+[ext_resource type="AudioStream" uid="uid://dlxk5het6rssj" path="res://Assets/Sound/Dialog/Perempuan/Hewan/Level2/Domba.mp3" id="15_ymnbx"]
+[ext_resource type="AudioStream" uid="uid://bhpyoqmo0cvvs" path="res://Assets/Sound/Dialog/Perempuan/Hewan/Level2/Babi.mp3" id="16_dkini"]
+[ext_resource type="AudioStream" uid="uid://c5nhrun3wyv8g" path="res://Assets/Sound/Dialog/Perempuan/Hewan/Level2/Ayam.mp3" id="17_dkini"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="20_sxrn6"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="21_mkd2n"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="22_m64rq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvvcl"]
+shader = ExtResource("2_71w7x")
+shader_parameter/speed = 0.5
+
+[sub_resource type="Gradient" id="Gradient_q8b33"]
+offsets = PackedFloat32Array(0, 0.68)
+colors = PackedColorArray(0.890196, 0.631373, 0.4, 1, 0.92549, 0.678431, 0.431373, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rpsow"]
+frequency = 0.0373
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_phu64"]
+height = 352
+color_ramp = SubResource("Gradient_q8b33")
+noise = SubResource("FastNoiseLite_rpsow")
+
+[sub_resource type="Gradient" id="Gradient_dxind"]
+offsets = PackedFloat32Array(0.684783, 0.717391)
+colors = PackedColorArray(0.945098, 0.741176, 0.517647, 0, 0.945098, 0.741176, 0.517647, 0.4)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_n82pv"]
+frequency = 0.0016
+offset = Vector3(580.1, 0.95, 0)
+fractal_type = 2
+fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q4bhr"]
+height = 352
+color_ramp = SubResource("Gradient_dxind")
+noise = SubResource("FastNoiseLite_n82pv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b110i"]
+bg_color = Color(0.984314, 0.847059, 0.647059, 0)
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+border_color = Color(0.684963, 0.614704, 0.388066, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 29.0
+expand_margin_top = 29.0
+expand_margin_right = 29.0
+expand_margin_bottom = 29.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_size = 50
+shadow_offset = Vector2(11.24, 10.555)
+anti_aliasing_size = 3.039
+
+[sub_resource type="Gradient" id="Gradient_d3kb4"]
+offsets = PackedFloat32Array(0, 0.369565)
+colors = PackedColorArray(0.945645, 0.726926, 0.513598, 1, 0.914326, 0.67161, 0.461287, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t3kca"]
+noise_type = 2
+frequency = 0.1175
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j6qn0"]
+height = 352
+color_ramp = SubResource("Gradient_d3kb4")
+noise = SubResource("FastNoiseLite_t3kca")
+
+[sub_resource type="Gradient" id="Gradient_uyq2m"]
+offsets = PackedFloat32Array(0.532609, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.113725)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ui0i0"]
+gradient = SubResource("Gradient_uyq2m")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_rdaqy"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6)
+colors = PackedColorArray(0.898039, 0, 0.27451, 1, 0.898039, 0, 0.27451, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0yq0x"]
+gradient = SubResource("Gradient_rdaqy")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_feodp"]
+font = ExtResource("5_280fc")
+font_size = 126
+font_color = Color(0.533333, 0.262745, 0.94902, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("5_280fc")
+font_size = 74
+font_color = Color(0.309804, 0.313726, 0.313726, 1)
+
+[sub_resource type="Gradient" id="Gradient_pqc1u"]
+offsets = PackedFloat32Array(0.652174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.298039)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1udfk"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l5r7o"]
+color_ramp = SubResource("Gradient_pqc1u")
+noise = SubResource("FastNoiseLite_1udfk")
+
+[sub_resource type="Gradient" id="Gradient_47e1k"]
+offsets = PackedFloat32Array(0.540179, 1)
+colors = PackedColorArray(0.154725, 0.508922, 0, 0, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y4fjp"]
+gradient = SubResource("Gradient_47e1k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_dxco0"]
+resource_name = "Mulai"
+length = 1.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jawaban/Kucing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.05, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1822, -964), Vector2(1722, -864)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jawaban/Ayam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.95, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1470, -764), Vector2(1570, -664)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jawaban/Domba:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.85, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1822, -572), Vector2(1722, -472)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Jawaban/Babi:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.75, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1470, -396), Vector2(1570, -296)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Jawaban/Kucing:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.05, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Jawaban/Ayam:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.95, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jawaban/Domba:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.85, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Jawaban/Babi:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.75, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ButtonDrag/Button:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5, 0.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(476, 24), Vector2(376, 24)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ButtonDrag/Button2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.35, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(276, 224), Vector2(376, 224)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ButtonDrag/Button3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.2, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(476, 416), Vector2(376, 416)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ButtonDrag/Button4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(276, 608), Vector2(376, 608)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ButtonDrag/Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ButtonDrag/Button2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ButtonDrag/Button3:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ButtonDrag/Button4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.05, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f80av"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jawaban/Kucing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1722, -864)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jawaban/Ayam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1570, -664)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jawaban/Domba:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1722, -472)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Jawaban/Babi:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1570, -296)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Jawaban/Kucing:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Jawaban/Ayam:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jawaban/Domba:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Jawaban/Babi:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ButtonDrag/Button:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 24)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ButtonDrag/Button2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 224)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ButtonDrag/Button3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 416)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ButtonDrag/Button4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 608)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ButtonDrag/Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ButtonDrag/Button2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ButtonDrag/Button3:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ButtonDrag/Button4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("NextButton:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(56, 888)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("NextButton:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_45ran"]
+resource_name = "popup"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NextButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(56, 939.78), Vector2(56, 868.665), Vector2(56, 888)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NextButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c8bac"]
+_data = {
+&"Mulai": SubResource("Animation_dxco0"),
+&"RESET": SubResource("Animation_f80av"),
+&"popup": SubResource("Animation_45ran")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cn7o7"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_fxe6j")
+metadata/_edit_vertical_guides_ = [-592.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.980392, 0.729412, 0.309804, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.984314, 0.847059, 0.647059, 0.407843)
+material = SubResource("ShaderMaterial_lvvcl")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1275.0
+offset_bottom = -573.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.13203, 2.13203)
+texture = ExtResource("3_m2jyo")
+stretch_mode = 1
+
+[node name="Woodl" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -424.0
+offset_top = 1528.0
+offset_right = -424.0
+offset_bottom = 1528.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.57079
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Woodl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2302.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.831373, 0.556863, 0.313726, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Woodl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.81699e-05
+offset_top = 392.0
+offset_bottom = 1812.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="TextureRect" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+
+[node name="TextureRect4" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+flip_h = true
+flip_v = true
+
+[node name="TextureRect2" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect2"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+flip_v = true
+metadata/_edit_lock_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect4"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect5"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect6"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect7" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect7"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+flip_h = true
+flip_v = true
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_phu64")
+flip_v = true
+
+[node name="TextureRect5" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect3"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_q4bhr")
+flip_h = true
+
+[node name="PapanTulis" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -754.5
+offset_top = -454.0
+offset_right = 754.5
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b110i")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="PapanTulis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_j6qn0")
+
+[node name="TextureRect2" type="TextureRect" parent="PapanTulis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ui0i0")
+
+[node name="Jawaban" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 86.0
+offset_top = 1040.0
+offset_right = 126.0
+offset_bottom = 1080.0
+theme = ExtResource("4_oiic1")
+
+[node name="Kucing" type="Sprite2D" parent="Jawaban"]
+z_index = 2
+position = Vector2(1722, -864)
+texture = SubResource("GradientTexture2D_0yq0x")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Kucing" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Kucing/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Kucing"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_oiic1")
+
+[node name="Label" type="Label" parent="Jawaban/Kucing"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Jawaban/Kucing"]
+modulate = Color(0, 0, 0, 0.270588)
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -49.0
+offset_right = 104.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("6_5t0xp")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Jawaban/Kucing"]
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -64.0
+offset_right = 82.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("7_7mts5")
+expand_mode = 1
+
+[node name="Ayam" type="Sprite2D" parent="Jawaban"]
+z_index = 2
+position = Vector2(1570, -664)
+texture = SubResource("GradientTexture2D_0yq0x")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Ayam" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Ayam/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Ayam"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_oiic1")
+
+[node name="Label" type="Label" parent="Jawaban/Ayam"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Jawaban/Ayam"]
+modulate = Color(0, 0, 0, 0.270588)
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -49.0
+offset_right = 104.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("6_5t0xp")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Jawaban/Ayam"]
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -64.0
+offset_right = 82.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("8_s4lna")
+expand_mode = 1
+
+[node name="Domba" type="Sprite2D" parent="Jawaban"]
+z_index = 2
+position = Vector2(1722, -472)
+texture = SubResource("GradientTexture2D_0yq0x")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Domba" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Domba/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Domba"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_oiic1")
+
+[node name="Label" type="Label" parent="Jawaban/Domba"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Jawaban/Domba"]
+modulate = Color(0, 0, 0, 0.270588)
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -49.0
+offset_right = 104.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("6_5t0xp")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Jawaban/Domba"]
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -64.0
+offset_right = 82.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("9_2hnpm")
+expand_mode = 1
+
+[node name="Babi" type="Sprite2D" parent="Jawaban"]
+z_index = 2
+position = Vector2(1570, -296)
+texture = SubResource("GradientTexture2D_0yq0x")
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Babi" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Babi/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Babi"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_oiic1")
+
+[node name="Label" type="Label" parent="Jawaban/Babi"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Jawaban/Babi"]
+modulate = Color(0, 0, 0, 0.270588)
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -49.0
+offset_right = 104.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("6_5t0xp")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Jawaban/Babi"]
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -64.0
+offset_right = 82.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.296706
+scale = Vector2(0.776, 0.776)
+pivot_offset = Vector2(113, 0)
+texture = ExtResource("10_oo383")
+expand_mode = 1
+
+[node name="ButtonDrag" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -744.0
+offset_top = -452.0
+offset_right = 760.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("11_ub6ex")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("12_ps004")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 24.0
+offset_right = 504.0
+offset_bottom = 152.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Kucing")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -64.0
+offset_right = -16.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Kucing"
+script = ExtResource("13_32nfx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button/Label"]
+stream = ExtResource("14_ymnbx")
+bus = &"Dialog"
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("12_ps004")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 224.0
+offset_right = 504.0
+offset_bottom = 352.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Domba")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -64.0
+offset_right = -16.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Domba"
+script = ExtResource("13_32nfx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button2/Label"]
+stream = ExtResource("15_ymnbx")
+bus = &"Dialog"
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("12_ps004")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 416.0
+offset_right = 504.0
+offset_bottom = 544.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Babi")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -64.0
+offset_right = -16.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Babi"
+script = ExtResource("13_32nfx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button3/Label"]
+stream = ExtResource("16_dkini")
+bus = &"Dialog"
+
+[node name="Button4" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("12_ps004")]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 608.0
+offset_right = 504.0
+offset_bottom = 736.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Ayam")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -64.0
+offset_right = -16.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Ayam"
+script = ExtResource("13_32nfx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button4/Label"]
+stream = ExtResource("17_dkini")
+bus = &"Dialog"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 86.0
+offset_right = 890.0
+offset_bottom = 527.0
+text = "Sambugkan Soal
+Dengan Jawaban
+Yang Sesuai"
+label_settings = SubResource("LabelSettings_gx5gw")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("13_80360")]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = -192.0
+offset_right = 400.0
+offset_bottom = -57.0
+grow_vertical = 0
+pivot_offset = Vector2(372, 67)
+theme = ExtResource("11_ub6ex")
+text = "Lanjut"
+icon_alignment = 2
+get_win = true
+next_level = "res://Scnee/Level/Hewan/Level2/winner_hewan_2.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_l5r7o")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_y4fjp")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_c8bac")
+}
+script = ExtResource("14_y085o")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("20_sxrn6")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_cn7o7")
+expand_icon = false
+path_to = "res://Scnee/Level/Hewan/KotaHewan/kota_hewan.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("21_mkd2n")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("22_m64rq")])
+on_start_dialogue = false
+change_scnee_end = true

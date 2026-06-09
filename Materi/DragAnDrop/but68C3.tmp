@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://djj2mmvshalbq"]
+
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="1_wpn55"]
+[ext_resource type="Script" path="res://Materi/DragAnDrop/Script/button.gd" id="2_fdr38"]
+[ext_resource type="Texture2D" uid="uid://cwnipoxp2cpqn" path="res://Assets/Sprite/Icon/PNG/Basic/Default/progress_empty.png" id="3_fnmxu"]
+[ext_resource type="Script" path="res://Materi/DragAnDrop/Script/tracker.gd" id="4_t3xxi"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+icon = ExtResource("1_wpn55")
+icon_alignment = 1
+script = ExtResource("2_fdr38")
+
+[node name="Tracker" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(2.23002, 2.23002)
+texture = ExtResource("3_fnmxu")
+script = ExtResource("4_t3xxi")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3r0fbft5xdur"
+path="res://.godot/imported/Selamat datang di.mp3-a189bb135f0fedd26784c6527ecd0730.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Selamat datang di.mp3"
+dest_files=["res://.godot/imported/Selamat datang di.mp3-a189bb135f0fedd26784c6527ecd0730.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,908 @@
+[gd_scene load_steps=17 format=3 uid="uid://16a1m88e7y4p"]
+
+[ext_resource type="Theme" uid="uid://bwyjg0atwhuff" path="res://UI/Saves/Theme/Login.tres" id="1_5blwb"]
+[ext_resource type="Script" uid="uid://iq6e4msy3t8i" path="res://Scnee/Login/Script/login.gd" id="2_nq50h"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="4_d1y73"]
+[ext_resource type="FontFile" uid="uid://lcbd8gybahvf" path="res://Assets/Font/Poppins/Poppins-Black.ttf" id="4_vhbth"]
+[ext_resource type="PackedScene" uid="uid://vtpa1ej2gvkd" path="res://Scnee/KostumisasiKarakter/character_selection.tscn" id="5_ochkc"]
+
+[sub_resource type="Gradient" id="Gradient_amk8x"]
+offsets = PackedFloat32Array(0.4, 0.994565)
+colors = PackedColorArray(0.819608, 0.972549, 0.937255, 1, 0.211765, 0.454902, 0.709804, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y0el4"]
+gradient = SubResource("Gradient_amk8x")
+fill_from = Vector2(1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_tkihp"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.8, 0.972826, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.964514, 0.964514, 0.964514, 0.951087, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vhbth"]
+seed = 215
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ochkc"]
+color_ramp = SubResource("Gradient_tkihp")
+noise = SubResource("FastNoiseLite_vhbth")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ub041"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 190
+corner_radius_top_right = 190
+corner_radius_bottom_right = 190
+corner_radius_bottom_left = 190
+corner_detail = 20
+anti_aliasing_size = 3.447
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amk8x"]
+bg_color = Color(0.753598, 0.871756, 0.718977, 1)
+corner_radius_top_left = 190
+corner_radius_top_right = 190
+corner_radius_bottom_right = 190
+corner_radius_bottom_left = 190
+corner_detail = 20
+anti_aliasing_size = 1.583
+
+[sub_resource type="LabelSettings" id="LabelSettings_y0el4"]
+font = ExtResource("4_d1y73")
+font_size = 196
+font_color = Color(0.524719, 0.436354, 0.53784, 1)
+outline_size = 70
+shadow_size = 111
+shadow_color = Color(0, 0, 0, 0.133333)
+
+[sub_resource type="FontVariation" id="FontVariation_ochkc"]
+base_font = ExtResource("4_vhbth")
+variation_embolden = 0.08
+spacing_glyph = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_ub041"]
+font = SubResource("FontVariation_ochkc")
+font_size = 66
+font_color = Color(0.524719, 0.436354, 0.53784, 1)
+outline_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_nyj1k"]
+font = ExtResource("4_d1y73")
+font_size = 39
+font_color = Color(0.8286, 0.103172, 0.261524, 1)
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_5blwb")
+script = ExtResource("2_nq50h")
+metadata/_edit_lock_ = true
+
+[node name="CharacterSelection" parent="." instance=ExtResource("5_ochkc")]
+
+[node name="Control2" type="Control" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_y0el4")
+
+[node name="TextureRect2" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_ochkc")
+
+[node name="Control" type="Control" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control2/Control"]
+modulate = Color(0.620737, 0.78755, 0.870332, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 126.0
+offset_top = 416.0
+offset_right = 126.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+offset_left = 3.0
+offset_top = -106.0
+offset_right = 259.0
+offset_bottom = 150.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel2" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+offset_left = 191.0
+offset_top = -215.0
+offset_right = 447.0
+offset_bottom = 41.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel3" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+offset_left = 300.0
+offset_top = -98.0
+offset_right = 556.0
+offset_bottom = 158.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel4" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -550.0
+offset_right = 128.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel5" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -487.0
+offset_right = -31.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel6" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.9999
+offset_top = -462.0
+offset_right = 303.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel7" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 239.0
+offset_top = -424.0
+offset_right = 495.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel8" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -399.0
+offset_right = -194.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel9" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -399.0
+offset_right = -403.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel10" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 465.0
+offset_top = -399.0
+offset_right = 721.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel11" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 653.0
+offset_top = -478.0
+offset_right = 909.0
+offset_bottom = -222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel12" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 757.0
+offset_top = -545.0
+offset_right = 1013.0
+offset_bottom = -289.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel13" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 882.0
+offset_top = -449.0
+offset_right = 1138.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel14" type="Panel" parent="Control2/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1011.0
+offset_top = -399.0
+offset_right = 1267.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="ColorRect3" type="ColorRect" parent="Control2/Control"]
+modulate = Color(0.759118, 0.867955, 0.923057, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 438.0
+offset_right = 66.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+offset_left = 3.0
+offset_top = -106.0
+offset_right = 259.0
+offset_bottom = 150.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel2" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+offset_left = 191.0
+offset_top = -215.0
+offset_right = 447.0
+offset_bottom = 41.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel3" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+offset_left = 300.0
+offset_top = -98.0
+offset_right = 556.0
+offset_bottom = 158.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel4" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -550.0
+offset_right = 128.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel5" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -487.0
+offset_right = -31.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel6" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.9999
+offset_top = -462.0
+offset_right = 303.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel7" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 239.0
+offset_top = -424.0
+offset_right = 495.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel8" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -399.0
+offset_right = -194.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel9" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -399.0
+offset_right = -403.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel10" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 465.0
+offset_top = -399.0
+offset_right = 721.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel11" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 653.0
+offset_top = -478.0
+offset_right = 909.0
+offset_bottom = -222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel12" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 757.0
+offset_top = -545.0
+offset_right = 1013.0
+offset_bottom = -289.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel13" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 882.0
+offset_top = -449.0
+offset_right = 1138.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel14" type="Panel" parent="Control2/Control/ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1011.0
+offset_top = -399.0
+offset_right = 1267.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="ColorRect2" type="ColorRect" parent="Control2/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 467.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+offset_left = 3.0
+offset_top = -106.0
+offset_right = 259.0
+offset_bottom = 150.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel2" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+offset_left = 191.0
+offset_top = -215.0
+offset_right = 447.0
+offset_bottom = 41.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel3" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+offset_left = 300.0
+offset_top = -98.0
+offset_right = 556.0
+offset_bottom = 158.0
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel4" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -550.0
+offset_right = 128.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel5" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -487.0
+offset_right = -31.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel6" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.9999
+offset_top = -462.0
+offset_right = 303.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel7" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 239.0
+offset_top = -424.0
+offset_right = 495.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel8" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -399.0
+offset_right = -194.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel9" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -399.0
+offset_right = -403.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel10" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 465.0
+offset_top = -399.0
+offset_right = 721.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel11" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 653.0
+offset_top = -478.0
+offset_right = 909.0
+offset_bottom = -222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel12" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 757.0
+offset_top = -545.0
+offset_right = 1013.0
+offset_bottom = -289.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel13" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 882.0
+offset_top = -449.0
+offset_right = 1138.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel14" type="Panel" parent="Control2/Control/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1011.0
+offset_top = -399.0
+offset_right = 1267.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17054, 1.17054)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub041")
+
+[node name="Panel2" type="Panel" parent="Control2"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -118.0
+offset_right = 128.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(10.6349, 0.92774)
+pivot_offset = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxFlat_amk8x")
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -491.0
+offset_right = 187.0
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "A  H"
+label_settings = SubResource("LabelSettings_y0el4")
+
+[node name="Label2" type="Label" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -546.5
+offset_top = -264.0
+offset_right = 546.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Aplikasi Pembelajaran Digital
+Ainun Habibie"
+label_settings = SubResource("LabelSettings_ub041")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = 7.0
+offset_right = 418.0
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="Error" type="Label" parent="Control2/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Nama tidak boleh kosong"
+label_settings = SubResource("LabelSettings_nyj1k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Control2/VBoxContainer"]
+custom_minimum_size = Vector2(641.48, 120.88)
+layout_mode = 2
+placeholder_text = "MasukkanNama"
+
+[node name="MasukkanNama" type="TextEdit" parent="Control2/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(641.48, 120.88)
+layout_mode = 2
+placeholder_text = "Masukkan Nama"
+
+[node name="Button" type="Button" parent="Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 114.29)
+layout_mode = 2
+text = "Masuk"
+
+[connection signal="pressed" from="Control2/VBoxContainer/Button" to="." method="_on_button_pressed"]

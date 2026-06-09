@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbblbtqry3fk3"
+path="res://.godot/imported/Selamat kamu benar.mp3-2157d54e861f3bf690a6697c78ac09b1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Selamat kamu benar.mp3"
+dest_files=["res://.godot/imported/Selamat kamu benar.mp3-2157d54e861f3bf690a6697c78ac09b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

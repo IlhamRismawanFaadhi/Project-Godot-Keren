@@ -1,0 +1,319 @@
+[gd_scene load_steps=24 format=3 uid="uid://cr68kxbqq40ky"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_vdlpm"]
+[ext_resource type="Texture2D" uid="uid://cjxlgdyg36oqv" path="res://Assets/Sprite/Patren/Vector/pattern_20.svg" id="2_scemh"]
+[ext_resource type="Theme" uid="uid://b0ckdl0svfggs" path="res://UI/Saves/Theme/DragAnDrop.tres" id="3_rtufr"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="4_6q0dk"]
+[ext_resource type="Texture2D" uid="uid://cp6yqw51wgnwy" path="res://Assets/Sprite/Buah/GrafisBuah/fruit/banana.png" id="5_7j2xh"]
+[ext_resource type="Script" uid="uid://dnf3epe0r3fo2" path="res://Scnee/Level/Buah/Level2/label_4.gd" id="5_vcskw"]
+[ext_resource type="AudioStream" uid="uid://ok6bifq5ofgg" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Pisang.mp3" id="6_eo0vr"]
+[ext_resource type="Texture2D" uid="uid://bt3lao5jty0w5" path="res://Assets/Sprite/Buah/GrafisBuah/veg/eggplant.png" id="6_ijo7u"]
+[ext_resource type="AudioStream" uid="uid://bvidlxfrx57xu" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Brokoli.mp3" id="7_fjnn5"]
+[ext_resource type="Texture2D" uid="uid://c0c6ubj53i0hv" path="res://Assets/Sprite/Buah/GrafisBuah/veg/tomato.png" id="7_vnrao"]
+[ext_resource type="AudioStream" uid="uid://cxsxnuw6rcyw2" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Terong.mp3" id="8_eoypn"]
+[ext_resource type="Texture2D" uid="uid://crwg6s3kyuny6" path="res://Assets/Sprite/Buah/GrafisBuah/veg/broccolli.png" id="8_lpk3d"]
+[ext_resource type="AudioStream" uid="uid://da12tsul13yyg" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Tomat.mp3" id="9_q3obr"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="9_xt27n"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="10_yfa23"]
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="11_0x0it"]
+[ext_resource type="AudioStream" uid="uid://dd28pbrjwx6gr" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Sambugkan Kata kata.mp3" id="12_wcvv0"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="18_fjnn5"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="19_q3obr"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="20_8nm0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("9_xt27n")
+font_size = 66
+font_color = Color(0.34138, 0.373167, 0.345371, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoypn"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdlpm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.972549, 0.956863, 0.917647, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.109804)
+self_modulate = Color(0.650128, 0.650128, 0.650128, 1)
+layout_mode = 0
+offset_right = 1298.0
+offset_bottom = 831.0
+scale = Vector2(1.849, 1.299)
+texture = ExtResource("2_scemh")
+stretch_mode = 1
+
+[node name="ButtonDrag" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 268.0
+offset_bottom = 1396.0
+theme = ExtResource("3_rtufr")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_6q0dk")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -968.0
+offset_right = 1400.0
+offset_bottom = -840.0
+win_pos = NodePath("../../Jawaban/Pisang")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Pisang"
+script = ExtResource("5_vcskw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button/Label"]
+stream = ExtResource("6_eo0vr")
+bus = &"Dialog"
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_6q0dk")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -704.0
+offset_right = 1400.0
+offset_bottom = -576.0
+win_pos = NodePath("../../Jawaban/Brokoli")
+
+[node name="Label2" type="Button" parent="ButtonDrag/Button2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Brokoli"
+script = ExtResource("5_vcskw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button2/Label2"]
+stream = ExtResource("7_fjnn5")
+bus = &"Dialog"
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_6q0dk")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -448.0
+offset_right = 1400.0
+offset_bottom = -320.0
+win_pos = NodePath("../../Jawaban/Terong")
+
+[node name="Label3" type="Button" parent="ButtonDrag/Button3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Terong"
+script = ExtResource("5_vcskw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button3/Label3"]
+stream = ExtResource("8_eoypn")
+bus = &"Dialog"
+
+[node name="Button4" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_6q0dk")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -192.0
+offset_right = 1400.0
+offset_bottom = -64.0
+win_pos = NodePath("../../Jawaban/Tomat")
+
+[node name="Label4" type="Button" parent="ButtonDrag/Button4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Tomat"
+script = ExtResource("5_vcskw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button4/Label4"]
+stream = ExtResource("9_q3obr")
+bus = &"Dialog"
+
+[node name="Jawaban" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 40.0
+offset_bottom = 1080.0
+
+[node name="Pisang" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -384)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Pisang" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Pisang/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Pisang"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("5_7j2xh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Pisang"]
+z_index = 1
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("5_7j2xh")
+
+[node name="Terong" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -128)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Terong" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Terong/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Terong"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("6_ijo7u")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Terong"]
+z_index = 1
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("6_ijo7u")
+
+[node name="Tomat" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -640)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Tomat" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Tomat/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Tomat"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("7_vnrao")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Tomat"]
+z_index = 1
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("7_vnrao")
+
+[node name="Brokoli" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -904)
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Brokoli" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Brokoli/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Brokoli"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("8_lpk3d")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Brokoli"]
+z_index = 1
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("8_lpk3d")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 64.0
+offset_right = 780.0
+offset_bottom = 505.0
+text = "Sambugkan Kata 
+kata ini dengan 
+soal yang sudah 
+ditentukan"
+label_settings = SubResource("LabelSettings_gx5gw")
+
+[node name="NextButton" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("10_yfa23")]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 816.0
+offset_right = 694.0
+offset_bottom = 966.0
+theme = ExtResource("3_rtufr")
+text = "   Level Selanjutnya"
+icon = ExtResource("11_0x0it")
+icon_alignment = 2
+get_win = true
+next_level = "res://Scnee/Level/Buah/Level2/drag_an_drop_buah_3.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wcvv0")
+autoplay = true
+bus = &"Dialog"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("18_fjnn5")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_eoypn")
+expand_icon = false
+path_to = "res://Scnee/Level/Buah/KotaBuah/kota_buah.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("19_q3obr")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("20_8nm0q")])
+on_start_dialogue = false
+change_scnee_end = true

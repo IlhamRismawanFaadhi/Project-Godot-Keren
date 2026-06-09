@@ -1,0 +1,1021 @@
+[gd_scene load_steps=30 format=3 uid="uid://nhbnxrpjlyua"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_ialx1"]
+[ext_resource type="Shader" uid="uid://crlyuhkwcvb8k" path="res://Scnee/Level/Matematika/Level2/Script/TextureScrolling.gdshader" id="2_lxy4u"]
+[ext_resource type="Texture2D" uid="uid://cwrfwiqgyra4u" path="res://Assets/Sprite/Icon/PNG/2x/cross.png" id="3_8cyff"]
+[ext_resource type="Theme" uid="uid://24lxa353fuhq" path="res://UI/Saves/Theme/DragAnDropMatematika2.tres" id="4_1ny6y"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="5_l5sy3"]
+[ext_resource type="Script" uid="uid://dnf3epe0r3fo2" path="res://Scnee/Level/Buah/Level2/label_4.gd" id="6_hjo6l"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="6_x8ogb"]
+[ext_resource type="AudioStream" uid="uid://bpqkqm7iwsxh5" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Apel.mp3" id="7_3bmv1"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="7_djjvm"]
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="8_0ylxi"]
+[ext_resource type="Texture2D" uid="uid://ckn5hl01ldjbf" path="res://Assets/Sprite/Icon/PNG/2x/plus.png" id="9_xodcr"]
+[ext_resource type="Script" uid="uid://twyc7gmb8i38" path="res://Scnee/Level/Matematika/Level2/Script/animation_player.gd" id="10_u1wwr"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="13_3bmv1"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="14_p7gqt"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="15_pdp3p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvvcl"]
+shader = ExtResource("2_lxy4u")
+shader_parameter/speed = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_feodp"]
+font = ExtResource("6_x8ogb")
+font_size = 126
+font_color = Color(0.533333, 0.262745, 0.94902, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ld4of"]
+font = ExtResource("6_x8ogb")
+font_size = 126
+font_color = Color(0.976471, 0.827451, 0.443137, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ytaf1"]
+font = ExtResource("6_x8ogb")
+font_size = 126
+font_color = Color(0.956863, 0.45098, 0.25098, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gdac"]
+font = ExtResource("6_x8ogb")
+font_size = 126
+font_color = Color(0.937255, 0.184314, 0.533333, 1)
+outline_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("6_x8ogb")
+font_size = 74
+font_color = Color(0.309804, 0.313726, 0.313726, 1)
+
+[sub_resource type="Gradient" id="Gradient_47e1k"]
+offsets = PackedFloat32Array(0.540179, 1)
+colors = PackedColorArray(0.154725, 0.508922, 0, 0, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y4fjp"]
+gradient = SubResource("Gradient_47e1k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_23vu5"]
+resource_name = "Mulai"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jawaban/Angka:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2088.78, -904), Vector2(2016, -904)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jawaban/Angka2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2088.78, -640), Vector2(2016, -640)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Jawaban/Angka3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2088.78, -384), Vector2(2016, -384)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Jawaban/Angka4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2088.78, -128), Vector2(2016, -128)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Jawaban/Angka:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jawaban/Angka2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Jawaban/Angka3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Jawaban/Angka4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ButtonDrag/Button:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.1, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1206.32, -968), Vector2(1272, -968)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ButtonDrag/Button2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.2, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1206.32, -704), Vector2(1272, -704)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ButtonDrag/Button3:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1206.32, -448), Vector2(1272, -448)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ButtonDrag/Button4:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.4, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1206.32, -192), Vector2(1272, -192)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ButtonDrag/Button:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ButtonDrag/Button2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ButtonDrag/Button3:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ButtonDrag/Button4:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uxxv6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jawaban/Angka:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2016, -904)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jawaban/Angka2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2016, -640)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Jawaban/Angka3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2016, -384)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Jawaban/Angka4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2016, -128)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Jawaban/Angka:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Jawaban/Angka2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Jawaban/Angka3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Jawaban/Angka4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ButtonDrag/Button:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1272, -968)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ButtonDrag/Button2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1272, -704)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ButtonDrag/Button3:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1272, -448)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ButtonDrag/Button4:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1272, -192)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ButtonDrag/Button:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ButtonDrag/Button2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ButtonDrag/Button3:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ButtonDrag/Button4:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("NextButton:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("NextButton:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(39.97, 836.115)]
+}
+
+[sub_resource type="Animation" id="Animation_1sdeh"]
+resource_name = "popup"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NextButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NextButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.35, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(196, 916.5), Vector2(196, 806.444), Vector2(196, 836.115)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u7rko"]
+_data = {
+&"Mulai": SubResource("Animation_23vu5"),
+&"RESET": SubResource("Animation_uxxv6"),
+&"popup": SubResource("Animation_1sdeh")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fdpr"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ialx1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.996078, 0.792157, 0.266667, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.697529, 0.554023, 0.258964, 0.109804)
+material = SubResource("ShaderMaterial_lvvcl")
+layout_mode = 0
+offset_right = 1848.0
+offset_bottom = 831.0
+scale = Vector2(1.299, 1.299)
+texture = ExtResource("3_8cyff")
+stretch_mode = 1
+
+[node name="ButtonDrag" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 203.0
+offset_top = 1040.0
+offset_right = 471.0
+offset_bottom = 1396.0
+theme = ExtResource("4_1ny6y")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("5_l5sy3")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -968.0
+offset_right = 1400.0
+offset_bottom = -840.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka4")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "8 + 2"
+script = ExtResource("6_hjo6l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button/Label"]
+stream = ExtResource("7_3bmv1")
+bus = &"Dialog"
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("5_l5sy3")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -704.0
+offset_right = 1400.0
+offset_bottom = -576.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka")
+
+[node name="Label2" type="Button" parent="ButtonDrag/Button2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "5 + 4"
+script = ExtResource("6_hjo6l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button2/Label2"]
+stream = ExtResource("7_3bmv1")
+bus = &"Dialog"
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("5_l5sy3")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -448.0
+offset_right = 1400.0
+offset_bottom = -320.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka2")
+
+[node name="Label3" type="Button" parent="ButtonDrag/Button3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "4 + 2"
+script = ExtResource("6_hjo6l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button3/Label3"]
+stream = ExtResource("7_3bmv1")
+bus = &"Dialog"
+
+[node name="Button4" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("5_l5sy3")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -192.0
+offset_right = 1400.0
+offset_bottom = -64.0
+text = "="
+icon = null
+win_pos = NodePath("../../Jawaban/Angka3")
+
+[node name="Label4" type="Button" parent="ButtonDrag/Button4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "6 + 8"
+script = ExtResource("6_hjo6l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button4/Label4"]
+stream = ExtResource("7_3bmv1")
+bus = &"Dialog"
+
+[node name="Jawaban" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 86.0
+offset_top = 1040.0
+offset_right = 126.0
+offset_bottom = 1080.0
+theme = ExtResource("4_1ny6y")
+
+[node name="Angka" type="Sprite2D" parent="Jawaban"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(2016, -904)
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Angka"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_1ny6y")
+
+[node name="Label" type="Label" parent="Jawaban/Angka"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "9"
+label_settings = SubResource("LabelSettings_feodp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Angka2" type="Sprite2D" parent="Jawaban"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(2016, -640)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka2" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Angka2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_1ny6y")
+
+[node name="Label" type="Label" parent="Jawaban/Angka2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "6"
+label_settings = SubResource("LabelSettings_ld4of")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Angka3" type="Sprite2D" parent="Jawaban"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(2016, -384)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka3" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Angka3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_1ny6y")
+
+[node name="Label" type="Label" parent="Jawaban/Angka3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.00847)
+text = "8"
+label_settings = SubResource("LabelSettings_ytaf1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Angka4" type="Sprite2D" parent="Jawaban"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(2016, -128)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Angka4" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Angka4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Panel" type="Panel" parent="Jawaban/Angka4"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -68.8052
+offset_right = 69.0
+offset_bottom = 69.1948
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_1ny6y")
+
+[node name="Label" type="Label" parent="Jawaban/Angka4"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_3gdac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 86.0
+offset_right = 890.0
+offset_bottom = 527.0
+text = "Sambugkan Soal
+Dengan Jawaban
+Yang Sesuai"
+label_settings = SubResource("LabelSettings_gx5gw")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("7_djjvm")]
+visible = false
+layout_mode = 0
+offset_left = 39.97
+offset_top = 836.115
+offset_right = 784.97
+offset_bottom = 971.115
+pivot_offset = Vector2(372, 67)
+theme = ExtResource("4_1ny6y")
+text = "   Level Selanjutnya"
+icon = ExtResource("8_0ylxi")
+icon_alignment = 2
+expand_icon = true
+get_win = true
+next_level = "res://Scnee/Level/Matematika/Level2/winner_matematika_2.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_y4fjp")
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+position = Vector2(1200, 540)
+
+[node name="UpLeft" type="Node2D" parent="Node2D"]
+
+[node name="Plus" type="Sprite2D" parent="Node2D/UpLeft"]
+modulate = Color(1, 0.295059, 0.131932, 1)
+position = Vector2(-1122, -455)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus3" type="Sprite2D" parent="Node2D/UpLeft"]
+modulate = Color(0, 0.697756, 0.312938, 1)
+position = Vector2(-1122, -340)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus2" type="Sprite2D" parent="Node2D/UpLeft"]
+modulate = Color(0, 0.600018, 0.986019, 1)
+position = Vector2(-1008, -455)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="BottomLeft" type="Node2D" parent="Node2D"]
+
+[node name="Plus7" type="Sprite2D" parent="Node2D/BottomLeft"]
+position = Vector2(-1122, 457)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus12" type="Sprite2D" parent="Node2D/BottomLeft"]
+position = Vector2(-1008, 457)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus9" type="Sprite2D" parent="Node2D/BottomLeft"]
+position = Vector2(-1122, 329)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="UpRight" type="Node2D" parent="Node2D"]
+
+[node name="Plus4" type="Sprite2D" parent="Node2D/UpRight"]
+position = Vector2(1116.15, -455.85)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus5" type="Sprite2D" parent="Node2D/UpRight"]
+position = Vector2(1116.15, -340.85)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus6" type="Sprite2D" parent="Node2D/UpRight"]
+position = Vector2(1016, -455.85)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="BottomRight" type="Node2D" parent="Node2D"]
+
+[node name="Plus11" type="Sprite2D" parent="Node2D/BottomRight"]
+modulate = Color(0, 0.6, 0.984314, 1)
+position = Vector2(984, 456.149)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="Plus10" type="Sprite2D" parent="Node2D/BottomRight"]
+modulate = Color(1, 0.294118, 0.133333, 1)
+position = Vector2(1096, 340)
+scale = Vector2(1.36299, 1.36299)
+texture = ExtResource("9_xodcr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u7rko")
+}
+script = ExtResource("10_u1wwr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("13_3bmv1")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_4fdpr")
+expand_icon = false
+path_to = "res://Scnee/Level/Matematika/KotaMatematika/kota_matematika.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("14_p7gqt")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("15_pdp3p")])
+on_start_dialogue = false
+change_scnee_end = true
+
+[connection signal="visibility_changed" from="NextButton" to="AnimationPlayer" method="_on_next_button_visibility_changed"]

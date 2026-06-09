@@ -1,0 +1,133 @@
+[gd_scene load_steps=16 format=3 uid="uid://dqm3t00pw1ppk"]
+
+[ext_resource type="Script" uid="uid://75qe1xkxgdci" path="res://Materi/Kota/Script/3d_pressed.gd" id="1_5rtm3"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="2_3imtv"]
+[ext_resource type="StyleBox" uid="uid://qb2iscf8fhwt" path="res://Materi/Kota/Script/3d_pressed.tres" id="2_prx0g"]
+[ext_resource type="Texture2D" uid="uid://534ikyuqqmrw" path="res://Assets/Sprite/Icon/PNG/2x/trophy.png" id="4_40n7f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_skde6"]
+size = Vector3(1.5, 3, 1.5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_agvmr"]
+viewport_path = NodePath("Label3d/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywyop"]
+font = ExtResource("2_3imtv")
+font_size = 81
+
+[sub_resource type="Animation" id="Animation_aasx1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3d/SubViewport/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gpmcf"]
+resource_name = "Reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3d/SubViewport/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.566667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_et2yn"]
+_data = {
+&"RESET": SubResource("Animation_aasx1"),
+&"Reveal": SubResource("Animation_gpmcf")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_ymm1i"]
+size = Vector3(1.5, 3, 1.5)
+
+[sub_resource type="Gradient" id="Gradient_40n7f"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.0138889, 0.888889)
+colors = PackedColorArray(0.366728, 0.536196, 0.304224, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6o3o3"]
+gradient = SubResource("Gradient_40n7f")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbe5o"]
+albedo_texture = SubResource("GradientTexture2D_6o3o3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_syh76"]
+material = SubResource("StandardMaterial3D_vbe5o")
+
+[node name="3DPressed" type="Area3D"]
+script = ExtResource("1_5rtm3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_skde6")
+
+[node name="Label3d" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1157, 0)
+pixel_size = 0.005
+billboard = 1
+no_depth_test = true
+texture = SubResource("ViewportTexture_agvmr")
+
+[node name="SubViewport" type="SubViewport" parent="Label3d"]
+transparent_bg = true
+size = Vector2i(435, 232)
+
+[node name="ColorRect" type="ColorRect" parent="Label3d/SubViewport"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.413419, 0.723918, 0.73024, 0.439216)
+
+[node name="Label" type="Label" parent="Label3d/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("2_prx0g")
+text = "Level 1"
+label_settings = SubResource("LabelSettings_ywyop")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_et2yn")
+}
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_ymm1i")
+
+[node name="SudahSelesai" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77733, 0.761366)
+visible = false
+modulate = Color(1, 0.854273, 0.0713098, 1)
+texture = ExtResource("4_40n7f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.576, 0, 0, 0, -2.09815e-08, -0.432, 0, 0.48, -1.88833e-08, 0, 1.77733, 0.761)
+mesh = SubResource("PlaneMesh_syh76")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

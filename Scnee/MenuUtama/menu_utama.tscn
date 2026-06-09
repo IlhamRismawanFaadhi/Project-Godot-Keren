@@ -1,0 +1,310 @@
+[gd_scene load_steps=31 format=3 uid="uid://blc4ynpt55uh2"]
+
+[ext_resource type="Script" uid="uid://bhtc6p2mlf7ih" path="res://Scnee/MenuUtama/Script/menu_utama.gd" id="1_3ro1k"]
+[ext_resource type="Script" uid="uid://1mas4favmjwf" path="res://Scnee/MenuUtama/Script/scroll_container.gd" id="1_7dutd"]
+[ext_resource type="Shader" uid="uid://crlyuhkwcvb8k" path="res://Scnee/Level/Matematika/Level2/Script/TextureScrolling.gdshader" id="1_s1mh7"]
+[ext_resource type="Texture2D" uid="uid://cwrfwiqgyra4u" path="res://Assets/Sprite/Icon/PNG/2x/cross.png" id="2_dwssc"]
+[ext_resource type="PackedScene" uid="uid://ce6jun2088anq" path="res://Scnee/ModulPembelajaran/modul_pembelajaran_2.tscn" id="4_fdhq3"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="6_qjc5p"]
+[ext_resource type="Texture2D" uid="uid://dmgass88rr6nn" path="res://Assets/Sprite/Icon/Vector/Basic/arrow_w.svg" id="6_uhxfi"]
+[ext_resource type="Texture2D" uid="uid://dvnnuvyvmag3a" path="res://Assets/Sprite/Icon/PNG/2x/home.png" id="7_s1mh7"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="9_dwssc"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="9_v2fcq"]
+[ext_resource type="AudioStream" uid="uid://boe5x3pm34lbn" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Hai.mp3" id="11_7fwx0"]
+[ext_resource type="AudioStream" uid="uid://d3r0fbft5xdur" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Selamat datang di.mp3" id="12_0om1g"]
+[ext_resource type="AudioStream" uid="uid://dhrviq1gf7r7k" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Disini kamu bisa.mp3" id="13_pn1ct"]
+[ext_resource type="AudioStream" uid="uid://c12vbdqnaxbfg" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Dengan memilih kartu.mp3" id="14_01r25"]
+[ext_resource type="AudioStream" uid="uid://b2ixq5uvmiyxq" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/dan pada tombol.mp3" id="15_js0uv"]
+[ext_resource type="AudioStream" uid="uid://dcboaqrpwny3x" path="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Kamu bisa melakukan.mp3" id="16_jqegx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ro1k"]
+shader = ExtResource("1_s1mh7")
+shader_parameter/speed = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhxfi"]
+bg_color = Color(0.538876, 0.784485, 0.485123, 1)
+border_width_right = 510
+border_color = Color(0.3069, 0.693222, 0.643828, 1)
+border_blend = true
+shadow_color = Color(0, 0, 0, 0.239216)
+shadow_size = 7
+shadow_offset = Vector2(11.895, 10.505)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ro1k"]
+bg_color = Color(1, 0.777953, 0.474341, 1)
+border_width_right = 510
+border_color = Color(1, 0.403291, 0.096381, 1)
+border_blend = true
+shadow_color = Color(0, 0, 0, 0.239216)
+shadow_size = 7
+shadow_offset = Vector2(11.895, 10.505)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2fcq"]
+bg_color = Color(0.764706, 0.666667, 0.811765, 1)
+border_width_right = 510
+border_color = Color(0.388235, 0.498039, 0.654902, 1)
+border_blend = true
+shadow_color = Color(0, 0, 0, 0.239216)
+shadow_size = 7
+shadow_offset = Vector2(11.895, 10.505)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwssc"]
+bg_color = Color(0.918783, 0.633151, 0.589953, 1)
+border_width_right = 510
+border_color = Color(0.717942, 0.353598, 0.47806, 1)
+border_blend = true
+shadow_color = Color(0, 0, 0, 0.239216)
+shadow_size = 7
+shadow_offset = Vector2(11.895, 10.505)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjc5p"]
+bg_color = Color(0.662745, 0.568627, 0.823529, 1)
+shadow_color = Color(0, 0, 0, 0.294118)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1mh7"]
+bg_color = Color(0.92549, 0.529412, 0.447059, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="FontVariation" id="FontVariation_dwssc"]
+variation_embolden = 0.44
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ro1k"]
+font = SubResource("FontVariation_dwssc")
+font_size = 62
+
+[sub_resource type="Gradient" id="Gradient_pqc1u"]
+offsets = PackedFloat32Array(0.559783, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.47451)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1udfk"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s1mh7"]
+color_ramp = SubResource("Gradient_pqc1u")
+noise = SubResource("FastNoiseLite_1udfk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3e4h"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_tcoot"]
+font = ExtResource("9_v2fcq")
+font_size = 74
+font_color = Color(0.442911, 0.442911, 0.442911, 1)
+
+[node name="MenuUtama" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_3ro1k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.697529, 0.554023, 0.258964, 0.109804)
+material = SubResource("ShaderMaterial_3ro1k")
+layout_mode = 0
+offset_right = 1848.0
+offset_bottom = 831.0
+scale = Vector2(1.299, 1.299)
+texture = ExtResource("2_dwssc")
+stretch_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_horizontal = 100
+script = ExtResource("1_7dutd")
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2400
+theme_override_constants/margin_right = 2400
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/CenterContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 170
+
+[node name="ModulBuah" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource("4_fdhq3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uhxfi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uhxfi")
+nama_pembelajaran = "Buah dan Sayuran"
+path_pembelajaran = "res://Scnee/Level/Buah/KotaBuah/kota_buah.tscn"
+
+[node name="ModulHewan" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource("4_fdhq3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_3ro1k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ro1k")
+nama_pembelajaran = "Hewan"
+path_pembelajaran = "res://Scnee/Level/Hewan/KotaHewan/kota_hewan.tscn"
+
+[node name="ModulKendaraan" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource("4_fdhq3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_v2fcq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2fcq")
+nama_pembelajaran = "Kendaraan"
+path_pembelajaran = "res://Scnee/Level/Kendaraan/KotaKendaraan/kota_kendaraan.tscn"
+
+[node name="ModulMatematika" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource("4_fdhq3")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwssc")
+nama_pembelajaran = "Matematika"
+path_pembelajaran = "res://Scnee/Level/Matematika/KotaMatematika/kota_matematika.tscn"
+
+[node name="ColorRect2" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qjc5p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1167.5
+offset_top = -49.5
+offset_right = 1167.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+
+[node name="Button" type="Button" parent="ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(250.545, 0)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_s1mh7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s1mh7")
+icon = ExtResource("6_uhxfi")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="ColorRect2/HBoxContainer"]
+layout_mode = 2
+text = "Hai Ilham, selamat belajar !!"
+label_settings = SubResource("LabelSettings_3ro1k")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+visible = false
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_s1mh7")
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1163.0
+offset_top = 28.0
+offset_right = 1163.0
+offset_bottom = 115.0
+grow_horizontal = 2
+theme_override_constants/separation = 65
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Back" parent="HBoxContainer/HBoxContainer" instance=ExtResource("6_qjc5p")]
+custom_minimum_size = Vector2(120.08, 129.75)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3e4h")
+expand_icon = false
+
+[node name="Home" parent="HBoxContainer/HBoxContainer" instance=ExtResource("6_qjc5p")]
+custom_minimum_size = Vector2(120.08, 129.75)
+layout_mode = 2
+icon = ExtResource("7_s1mh7")
+expand_icon = false
+path_to = "res://Scnee/KostumisasiKarakter/character_costumize.tscn"
+
+[node name="SelamatDatang" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selamat datang "
+label_settings = SubResource("LabelSettings_tcoot")
+
+[node name="Dialogue" parent="." instance=ExtResource("9_dwssc")]
+layout_mode = 1
+array_dialog = Array[String](["Hai", "Selamat datang di. Permainan Digital Ainun Habibi. ", "Disini kamu bisa memilih banyak tema belajar. ", "Dengan memilih kartu tema yang ada di sini. ", "dan pada tombol diatas berbentuk rumah.", "Kamu bisa melakukan perubahan kostumisasi karakter"])
+reveal_speed = 0.01
+text_display_time = 3.0
+array_voice = Array[AudioStream]([ExtResource("11_7fwx0"), ExtResource("12_0om1g"), ExtResource("13_pn1ct"), ExtResource("14_01r25"), ExtResource("15_js0uv"), ExtResource("16_jqegx")])

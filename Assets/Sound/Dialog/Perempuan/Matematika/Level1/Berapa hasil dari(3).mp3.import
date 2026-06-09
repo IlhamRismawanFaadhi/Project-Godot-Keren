@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byarw6a6nd1fq"
+path="res://.godot/imported/Berapa hasil dari(3).mp3-e0d3ceb7238894fcd472bb52b3e1c321.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Matematika/Level1/Berapa hasil dari(3).mp3"
+dest_files=["res://.godot/imported/Berapa hasil dari(3).mp3-e0d3ceb7238894fcd472bb52b3e1c321.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

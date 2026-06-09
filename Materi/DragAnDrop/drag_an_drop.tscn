@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnmjvdbu6f16h"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_fdiho"]
+[ext_resource type="Theme" uid="uid://b0ckdl0svfggs" path="res://UI/Saves/Theme/DragAnDrop.tres" id="1_scp14"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="1_w14vm"]
+[ext_resource type="Texture2D" uid="uid://b074vi8ett0o7" path="res://icon.svg" id="2_wc3tv"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="4_4jcoq"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="5_6bhm6"]
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="6_my2bb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("4_4jcoq")
+font_size = 61
+font_color = Color(0.153491, 0.463426, 0.361213, 1)
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fdiho")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.698489, 1, 0.850348, 1)
+metadata/_edit_lock_ = true
+
+[node name="Jawaban" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 40.0
+offset_bottom = 1080.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -384)
+texture = ExtResource("2_wc3tv")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Sprite2D" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Sprite2D/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -192)
+texture = ExtResource("2_wc3tv")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Sprite2D2" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Sprite2D2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -576)
+texture = ExtResource("2_wc3tv")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Sprite2D3" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Sprite2D3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -768)
+texture = ExtResource("2_wc3tv")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Sprite2D4" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Sprite2D4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="ButtonDrag" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 40.0
+offset_bottom = 1080.0
+theme = ExtResource("1_scp14")
+
+[node name="Button4" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("1_w14vm")]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = -256.0
+offset_right = 1472.0
+offset_bottom = -128.0
+win_pos = NodePath("../../Jawaban/Sprite2D")
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("1_w14vm")]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = -448.0
+offset_right = 1472.0
+offset_bottom = -320.0
+win_pos = NodePath("../../Jawaban/Sprite2D2")
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("1_w14vm")]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = -640.0
+offset_right = 1472.0
+offset_bottom = -512.0
+win_pos = NodePath("../../Jawaban/Sprite2D2")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("1_w14vm")]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = -832.0
+offset_right = 1472.0
+offset_bottom = -704.0
+win_pos = NodePath("../../Jawaban/Sprite2D")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 176.0
+offset_right = 1048.0
+offset_bottom = 416.0
+text = "Sambugkan Kata kata ini 
+Dengan soal yang sudah 
+ditentukan..."
+label_settings = SubResource("LabelSettings_gx5gw")
+
+[node name="NextButton" parent="." instance=ExtResource("5_6bhm6")]
+visible = false
+layout_mode = 0
+offset_left = 168.0
+offset_top = 784.0
+offset_right = 592.0
+offset_bottom = 934.0
+theme = ExtResource("1_scp14")
+text = "   Level Selanjutnya"
+icon = ExtResource("6_my2bb")
+icon_alignment = 2

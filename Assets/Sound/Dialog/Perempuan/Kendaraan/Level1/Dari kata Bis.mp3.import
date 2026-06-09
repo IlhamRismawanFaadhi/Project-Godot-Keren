@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb01hwdirutc"
+path="res://.godot/imported/Dari kata Bis.mp3-ad6a1b409a08e7f1f5a90a6cf58cb848.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Kendaraan/Level1/Dari kata Bis.mp3"
+dest_files=["res://.godot/imported/Dari kata Bis.mp3-ad6a1b409a08e7f1f5a90a6cf58cb848.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

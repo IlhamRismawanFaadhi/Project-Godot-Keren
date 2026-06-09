@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbqrbbmbhhq86"
+path="res://.godot/imported/Bentuknya panjang dan hijau.mp3-399d1eb284728950ba3a47b9a939cc0f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Bentuknya panjang dan hijau.mp3"
+dest_files=["res://.godot/imported/Bentuknya panjang dan hijau.mp3-399d1eb284728950ba3a47b9a939cc0f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

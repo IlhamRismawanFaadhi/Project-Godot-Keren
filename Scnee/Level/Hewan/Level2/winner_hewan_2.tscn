@@ -1,0 +1,336 @@
+[gd_scene load_steps=27 format=3 uid="uid://k0xlvgxw1sl2"]
+
+[ext_resource type="Script" uid="uid://dc7rvrq5284la" path="res://Scnee/Winner/Script/winner.gd" id="1_gorok"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="2_5atv1"]
+[ext_resource type="Texture2D" uid="uid://534ikyuqqmrw" path="res://Assets/Sprite/Icon/PNG/2x/trophy.png" id="3_rk1i7"]
+[ext_resource type="Texture2D" uid="uid://byrrc6145rjec" path="res://Assets/Sprite/Icon/PNG/2x/locked.png" id="4_m4d3t"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="5_8jkab"]
+[ext_resource type="Texture2D" uid="uid://cdt6ttv0f8fsu" path="res://Assets/Sprite/Hewan/AnimalFrame/Penguin.png" id="6_mlvut"]
+[ext_resource type="Texture2D" uid="uid://buaeu8dohwb5p" path="res://Assets/Sprite/Hewan/AnimalFrame/Sheep.png" id="7_rb6gx"]
+[ext_resource type="Texture2D" uid="uid://isupxng8cuox" path="res://Assets/Sprite/Hewan/AnimalFrame/Elephant.png" id="8_qrd27"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="9_pnobt"]
+[ext_resource type="AudioStream" uid="uid://cdv37g7m560v2" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Selamat kamu berhasil.mp3" id="10_bw0nr"]
+[ext_resource type="AudioStream" uid="uid://dyudexmgn466e" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Kamu bisa membukanya.mp3" id="11_ls14a"]
+
+[sub_resource type="Gradient" id="Gradient_onqc6"]
+offsets = PackedFloat32Array(0, 0.68)
+colors = PackedColorArray(0.890196, 0.631373, 0.4, 1, 0.92549, 0.678431, 0.431373, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k2kmn"]
+frequency = 0.0373
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wqylt"]
+height = 352
+color_ramp = SubResource("Gradient_onqc6")
+noise = SubResource("FastNoiseLite_k2kmn")
+
+[sub_resource type="Gradient" id="Gradient_2a5bm"]
+offsets = PackedFloat32Array(0.684783, 0.717391)
+colors = PackedColorArray(0.945098, 0.741176, 0.517647, 0, 0.945098, 0.741176, 0.517647, 0.4)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_17qq6"]
+frequency = 0.0016
+offset = Vector3(580.1, 0.95, 0)
+fractal_type = 2
+fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3xixm"]
+height = 352
+color_ramp = SubResource("Gradient_2a5bm")
+noise = SubResource("FastNoiseLite_17qq6")
+
+[sub_resource type="Gradient" id="Gradient_dp7c8"]
+offsets = PackedFloat32Array(0.559783, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.47451)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rmnq3"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6ltuw"]
+color_ramp = SubResource("Gradient_dp7c8")
+noise = SubResource("FastNoiseLite_rmnq3")
+
+[sub_resource type="Gradient" id="Gradient_nnjsk"]
+offsets = PackedFloat32Array(0.540179, 1)
+colors = PackedColorArray(0.154725, 0.508922, 0, 0, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e4htg"]
+gradient = SubResource("Gradient_nnjsk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoflx"]
+bg_color = Color(0.478775, 0.653786, 0.476728, 1)
+border_width_bottom = 15
+border_color = Color(0.618913, 0.791509, 0.61764, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf48a"]
+bg_color = Color(0.470588, 0.52549, 0.780392, 1)
+border_width_bottom = 15
+border_color = Color(0.662745, 0.709804, 0.87451, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccwhb"]
+bg_color = Color(0.996369, 0.329156, 0.416406, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.820354, 0.814118, 0.617346, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_offset = Vector2(-7.995, 16.05)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p7m1"]
+font = ExtResource("5_8jkab")
+font_size = 51
+font_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gorok")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.94902, 0.94902, 1)
+metadata/_edit_lock_ = true
+
+[node name="Woodl" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Woodl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.831373, 0.556863, 0.313726, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Woodl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_wqylt")
+
+[node name="TextureRect4" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_3xixm")
+flip_h = true
+flip_v = true
+
+[node name="TextureRect2" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_wqylt")
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect2"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_3xixm")
+
+[node name="TextureRect3" type="TextureRect" parent="Woodl/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("NoiseTexture2D_wqylt")
+flip_v = true
+
+[node name="TextureRect5" type="TextureRect" parent="Woodl/VBoxContainer/TextureRect3"]
+layout_mode = 2
+offset_right = 2400.0
+offset_bottom = 352.0
+texture = SubResource("NoiseTexture2D_3xixm")
+flip_h = true
+
+[node name="TextureRect3" type="TextureRect" parent="Woodl"]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_6ltuw")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Woodl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_e4htg")
+metadata/_edit_lock_ = true
+
+[node name="Button" parent="." instance=ExtResource("2_5atv1")]
+custom_minimum_size = Vector2(352.74, 148.555)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -103.0
+offset_right = 259.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hoflx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf48a")
+text = ""
+icon = ExtResource("3_rk1i7")
+icon_alignment = 1
+expand_icon = true
+get_win = true
+next_level = "res://Scnee/Level/Hewan/KotaHewan/kota_hewan.tscn"
+get_reward = true
+jenis_reward = 1
+index_reward = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -109.0
+offset_right = 260.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ccwhb")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -76.0
+offset_right = 176.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_m4d3t")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -111.0
+offset_right = 920.0
+offset_bottom = 111.0
+grow_vertical = 2
+text = "Goyangkan HP 
+mu untuk membuka 
+piala yang terkunci ini"
+label_settings = SubResource("LabelSettings_0p7m1")
+
+[node name="Bayangan3" type="Sprite2D" parent="."]
+modulate = Color(0.290196, 0.290196, 0.290196, 0.486275)
+position = Vector2(2257.35, 194.672)
+rotation = 0.151187
+scale = Vector2(0.391632, 0.396025)
+skew = 0.00386405
+texture = ExtResource("6_mlvut")
+
+[node name="Gambar3" type="Sprite2D" parent="."]
+position = Vector2(2243.35, 180.506)
+rotation = 0.151187
+scale = Vector2(0.36071, 0.364756)
+skew = 0.00386405
+texture = ExtResource("6_mlvut")
+
+[node name="Bayangan4" type="Sprite2D" parent="."]
+modulate = Color(0.290196, 0.290196, 0.290196, 0.486275)
+position = Vector2(2266.35, 911.672)
+rotation = 0.151187
+scale = Vector2(0.391632, 0.396025)
+skew = 0.00386405
+texture = ExtResource("6_mlvut")
+
+[node name="Gambar4" type="Sprite2D" parent="."]
+position = Vector2(2252.35, 897.506)
+rotation = 0.151187
+scale = Vector2(0.36071, 0.364756)
+skew = 0.00386405
+texture = ExtResource("7_rb6gx")
+
+[node name="Bayangan" type="Sprite2D" parent="."]
+modulate = Color(0.290196, 0.290196, 0.290196, 0.486275)
+position = Vector2(149.688, 204.222)
+rotation = -0.16867
+scale = Vector2(0.391632, 0.396025)
+skew = 0.00386405
+texture = ExtResource("6_mlvut")
+
+[node name="Gambar" type="Sprite2D" parent="."]
+position = Vector2(135.683, 190.056)
+rotation = -0.16867
+scale = Vector2(0.36071, 0.364756)
+skew = 0.00386405
+texture = ExtResource("8_qrd27")
+
+[node name="Dialogue" parent="." instance=ExtResource("9_pnobt")]
+layout_mode = 1
+array_dialog = Array[String](["Selamat kamu berhasil", "Kamu bisa membukanya dengan menggoyangkan handphone kamu"])
+array_voice = Array[AudioStream]([ExtResource("10_bw0nr"), ExtResource("11_ls14a")])

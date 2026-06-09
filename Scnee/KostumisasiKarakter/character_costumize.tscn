@@ -1,0 +1,284 @@
+[gd_scene load_steps=18 format=3 uid="uid://juebwnevv0s2"]
+
+[ext_resource type="Script" uid="uid://cwtw776q2aixp" path="res://Scnee/KostumisasiKarakter/Script/character_costumize.gd" id="1_qya7y"]
+[ext_resource type="PackedScene" uid="uid://bdxqdd3xc5bvc" path="res://Materi/Karakter/character.tscn" id="2_e570w"]
+[ext_resource type="Theme" uid="uid://d3y5qhyh7d7p4" path="res://UI/Saves/Theme/char_costumize.tres" id="2_gkwyj"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="4_ju0qv"]
+[ext_resource type="Texture2D" uid="uid://buivt27rt3clo" path="res://Assets/Sprite/Icon/PNG/Basic/Default/navigation_w.png" id="5_wygcv"]
+[ext_resource type="Texture2D" uid="uid://cdjj53x3j1iuk" path="res://Assets/Sprite/Icon/PNG/Basic/Default/navigation_e.png" id="6_cnqwn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vsioq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_qya7y"]
+sky_material = SubResource("ProceduralSkyMaterial_vsioq")
+
+[sub_resource type="Environment" id="Environment_ej5bn"]
+background_mode = 1
+background_color = Color(0.757856, 0.550168, 0.467995, 1)
+background_energy_multiplier = 1.05
+sky = SubResource("Sky_qya7y")
+tonemap_mode = 2
+fog_light_color = Color(0.711408, 0.508536, 0.0838396, 1)
+fog_light_energy = 2.05
+adjustment_enabled = true
+adjustment_saturation = 1.36
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w2edv"]
+top_radius = 4.0
+bottom_radius = 4.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_qya7y"]
+font = ExtResource("4_ju0qv")
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ku02"]
+font = ExtResource("4_ju0qv")
+font_size = 76
+font_color = Color(0.921811, 0.906511, 0.879184, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e570w"]
+bg_color = Color(1, 0.312194, 0.46204, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qya7y"]
+bg_color = Color(0.405802, 0.6815, 0.336826, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Animation" id="Animation_ccina"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.21293, 1.74846e-07, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pw7d5"]
+resource_name = "move"
+length = 15.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.21293, 1.74846e-07, 0), Vector3(-0.21293, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8v8yx"]
+_data = {
+&"RESET": SubResource("Animation_ccina"),
+&"move": SubResource("Animation_pw7d5")
+}
+
+[node name="CharacterCostumize" type="Node3D"]
+script = ExtResource("1_qya7y")
+
+[node name="Enviroment" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Enviroment"]
+environment = SubResource("Environment_ej5bn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
+transform = Transform3D(-0.334356, -0.93029, 0.150888, 0.895739, -0.263909, 0.357776, -0.293015, 0.25478, 0.921536, 3.45164, 1.59257, 0)
+light_color = Color(0.73353, 0.648958, 0.533068, 1)
+light_energy = 5.444
+shadow_enabled = true
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, -3.69493e-08, 1.70897e-07, 0, 0.977416, 0.211325, -1.74846e-07, -0.211325, 0.977416, 0, 2.325, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.05, 7.135)
+fov = 62.6
+
+[node name="Character" parent="." instance=ExtResource("2_e570w")]
+index_kacamata = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("CylinderMesh_w2edv")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_gkwyj")
+
+[node name="DisabledLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.0
+offset_top = 145.0
+offset_right = 370.0
+offset_bottom = 204.0
+grow_horizontal = 2
+text = "Selesaikan misi terlebih dahulu"
+label_settings = SubResource("LabelSettings_qya7y")
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -388.0
+offset_top = 24.0
+offset_right = 389.0
+offset_bottom = 131.0
+grow_horizontal = 2
+text = "UBAH PENAMPILAN"
+label_settings = SubResource("LabelSettings_4ku02")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1091.0
+offset_top = -349.5
+offset_right = 1091.0
+offset_bottom = 349.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 113
+alignment = 1
+
+[node name="Topi" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1512
+alignment = 1
+
+[node name="TopiKiri" type="Button" parent="UI/VBoxContainer/Topi"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("5_wygcv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TopiKanan" type="Button" parent="UI/VBoxContainer/Topi"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("6_cnqwn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Kacamata" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1795
+alignment = 1
+
+[node name="KacamataKiri" type="Button" parent="UI/VBoxContainer/Kacamata"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("5_wygcv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="KacamataKanan" type="Button" parent="UI/VBoxContainer/Kacamata"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("6_cnqwn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Baju" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1795
+alignment = 1
+
+[node name="BajuKiri" type="Button" parent="UI/VBoxContainer/Baju"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("5_wygcv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BajuKanan" type="Button" parent="UI/VBoxContainer/Baju"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("6_cnqwn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sepatu" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1512
+alignment = 1
+
+[node name="SepatuKiri" type="Button" parent="UI/VBoxContainer/Sepatu"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("5_wygcv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SepatuKanan" type="Button" parent="UI/VBoxContainer/Sepatu"]
+custom_minimum_size = Vector2(101.01, 101.01)
+layout_mode = 2
+icon = ExtResource("6_cnqwn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonNext" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -152.0
+offset_right = 193.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e570w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qya7y")
+disabled = true
+text = "Simpan"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8v8yx")
+}
+
+[connection signal="pressed" from="UI/VBoxContainer/Topi/TopiKiri" to="." method="_on_topi_kiri_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Topi/TopiKanan" to="." method="_on_topi_kanan_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Kacamata/KacamataKiri" to="." method="_on_kacamata_kiri_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Kacamata/KacamataKanan" to="." method="_on_kacamata_kanan_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Baju/BajuKiri" to="." method="_on_baju_kiri_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Baju/BajuKanan" to="." method="_on_baju_kanan_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Sepatu/SepatuKiri" to="." method="_on_sepatu_kiri_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Sepatu/SepatuKanan" to="." method="_on_sepatu_kanan_pressed"]
+[connection signal="pressed" from="UI/ButtonNext" to="." method="_on_button_next_pressed"]

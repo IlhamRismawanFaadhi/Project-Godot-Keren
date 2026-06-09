@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbxlxaq6po6yg"]
+
+[ext_resource type="Script" uid="uid://b60lptugvnph5" path="res://Universal/Scnee/Transition/Script/transition.gd" id="1_hmhjx"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="2_tbx6j"]
+
+[sub_resource type="Gradient" id="Gradient_jdp6c"]
+offsets = PackedFloat32Array(0.841727, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cmngv"]
+gradient = SubResource("Gradient_jdp6c")
+width = 1080
+height = 1080
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.445, 3.05)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_x853e"]
+resource_name = "Change"
+length = 1.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:texture:fill_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.445, 1.24447), Vector2(0.445, 0.495)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.46, 1.47),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_i4q7p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:texture:fill_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.445, 3.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vunxh"]
+_data = {
+&"Change": SubResource("Animation_x853e"),
+&"RESET": SubResource("Animation_i4q7p")
+}
+
+[node name="Transition" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_hmhjx")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="TextureRect" parent="."]
+z_index = 1
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01092, 2.21407)
+pivot_offset = Vector2(1200, 540)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_cmngv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vunxh")
+}
+
+[node name="Dialogue" parent="." instance=ExtResource("2_tbx6j")]
+array_dialog = Array[String]([""])
+array_voice = Array[AudioStream]([null])

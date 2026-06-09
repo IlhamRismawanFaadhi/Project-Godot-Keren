@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhrviq1gf7r7k"
+path="res://.godot/imported/Disini kamu bisa.mp3-ac28453500b948be784bd191767f2eda.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Menu Utama/Disini kamu bisa.mp3"
+dest_files=["res://.godot/imported/Disini kamu bisa.mp3-ac28453500b948be784bd191767f2eda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

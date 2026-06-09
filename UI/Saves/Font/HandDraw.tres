@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cnhe6xh1nt8sh"]
+
+[ext_resource type="FontFile" uid="uid://boba0yhuxcm5l" path="res://Assets/Font/Patrick_Hand/PatrickHand-Regular.ttf" id="1_rudri"]
+
+[resource]
+base_font = ExtResource("1_rudri")
+variation_embolden = 0.9
+spacing_glyph = 2

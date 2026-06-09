@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bab2j452ygkbv"]
+
+[ext_resource type="Script" uid="uid://dcipt3rpmdtbr" path="res://Materi/AudioCapture/SCript/audio_capture.gd" id="1_lbvvt"]
+[ext_resource type="AudioStream" uid="uid://cfuqx4bx4a7vk" path="res://Assets/Sound/Audio/Steel jingles/jingles_STEEL16.ogg" id="2_nfrfg"]
+
+[sub_resource type="Gradient" id="Gradient_7sldf"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m3nqr"]
+gradient = SubResource("Gradient_7sldf")
+
+[node name="AudioCapture" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbvvt")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nfrfg")
+autoplay = true
+bus = &"Microphone"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1344.0
+offset_top = -664.0
+offset_right = 1368.0
+offset_bottom = 640.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_m3nqr")

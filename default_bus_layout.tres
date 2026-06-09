@@ -1,0 +1,35 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://ift8u27eyall"]
+
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_lejjw"]
+resource_name = "Capture"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_0sb8m"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_j70wm"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectRecord" id="AudioEffectRecord_7auqw"]
+resource_name = "Record"
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectCapture_lejjw")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectSpectrumAnalyzer_0sb8m")
+bus/0/effect/1/enabled = false
+bus/1/name = &"Microphone"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_j70wm")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectRecord_7auqw")
+bus/1/effect/1/enabled = true
+bus/2/name = &"Dialog"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"

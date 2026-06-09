@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://byocqi2puw4uk"]
+
+[resource]
+resource_name = "Trotoar"
+cull_mode = 2
+albedo_color = Color(0.89569, 0.805477, 0.712121, 1)
+roughness = 0.5

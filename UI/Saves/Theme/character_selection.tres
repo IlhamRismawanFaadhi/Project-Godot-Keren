@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://duwa75n81br1k"]
+
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="1_126r2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v2t5"]
+bg_color = Color(0.66459, 0.497223, 0.613508, 1)
+border_width_bottom = 22
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_bottom = 10.0
+anti_aliasing_size = 2.665
+
+[resource]
+Button/font_sizes/font_size = 51
+Button/fonts/font = ExtResource("1_126r2")
+Button/styles/disabled = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/focus = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/hover = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/hover_mirrored = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/normal = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/pressed = SubResource("StyleBoxFlat_3v2t5")
+Button/styles/pressed_mirrored = SubResource("StyleBoxFlat_3v2t5")

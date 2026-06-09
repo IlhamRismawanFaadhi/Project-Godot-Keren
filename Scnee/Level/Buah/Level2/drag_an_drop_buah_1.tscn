@@ -1,0 +1,320 @@
+[gd_scene load_steps=24 format=3 uid="uid://wftu1djf8mqp"]
+
+[ext_resource type="Script" uid="uid://buo1s1qjeclx1" path="res://Materi/DragAnDrop/Script/drag_an_drop.gd" id="1_h377s"]
+[ext_resource type="Texture2D" uid="uid://cl38ntagut8df" path="res://Assets/Sprite/Patren/Vector/pattern_83.svg" id="2_q67t3"]
+[ext_resource type="Theme" uid="uid://b0ckdl0svfggs" path="res://UI/Saves/Theme/DragAnDrop.tres" id="3_5k3jv"]
+[ext_resource type="Texture2D" uid="uid://ciu4nl3byvs0u" path="res://Assets/Sprite/Buah/GambarBuah/strawberry.png" id="3_q1w3v"]
+[ext_resource type="PackedScene" uid="uid://djj2mmvshalbq" path="res://Materi/DragAnDrop/button.tscn" id="4_72er6"]
+[ext_resource type="Texture2D" uid="uid://c5p0rld4ofo3p" path="res://Assets/Sprite/Buah/GrafisBuah/fruit/orange.png" id="4_ot0w2"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="5_bpmmw"]
+[ext_resource type="Script" uid="uid://dnf3epe0r3fo2" path="res://Scnee/Level/Buah/Level2/label_4.gd" id="5_jlpd6"]
+[ext_resource type="Texture2D" uid="uid://ds8ipnqcg1yia" path="res://Assets/Sprite/Buah/GrafisBuah/fruit/apple.png" id="5_qsfik"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="6_84vr0"]
+[ext_resource type="AudioStream" uid="uid://dl4sgo46kolbt" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Stawberi.mp3" id="6_cbn6v"]
+[ext_resource type="Texture2D" uid="uid://3olbrsojrwx4" path="res://Assets/Sprite/Buah/GrafisBuah/fruit/grapes.png" id="6_vh78n"]
+[ext_resource type="AudioStream" uid="uid://ba6rwjrybaj4n" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Jeruk.mp3" id="7_5ooeq"]
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="7_ivjmg"]
+[ext_resource type="AudioStream" uid="uid://bnfnbm7huwk53" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Anggur.mp3" id="8_jsrm0"]
+[ext_resource type="AudioStream" uid="uid://bpqkqm7iwsxh5" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Apel.mp3" id="9_l81ri"]
+[ext_resource type="AudioStream" uid="uid://dd28pbrjwx6gr" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level2/Sambugkan Kata kata.mp3" id="13_f6wws"]
+[ext_resource type="PackedScene" uid="uid://qwt48h2qkhck" path="res://Scnee/MenuUtama/iconbutton.tscn" id="18_5ooeq"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="19_l81ri"]
+[ext_resource type="AudioStream" uid="uid://s4qoolcbpph3" path="res://Assets/Sound/Dialog/Perempuan/Afirmasi/Iya kamu benar.mp3" id="20_816s4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpmq"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx5gw"]
+font = ExtResource("5_bpmmw")
+font_size = 66
+font_color = Color(0.34138, 0.373167, 0.345371, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsrm0"]
+bg_color = Color(0.888874, 0.452839, 0.410059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="DragAnDrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h377s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.972549, 0.956863, 0.917647, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.109804)
+self_modulate = Color(0.650128, 0.650128, 0.650128, 1)
+layout_mode = 0
+offset_right = 1298.0
+offset_bottom = 831.0
+scale = Vector2(1.849, 1.299)
+texture = ExtResource("2_q67t3")
+stretch_mode = 1
+
+[node name="ButtonDrag" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 268.0
+offset_bottom = 1396.0
+theme = ExtResource("3_5k3jv")
+
+[node name="Button" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_72er6")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -968.0
+offset_right = 1400.0
+offset_bottom = -840.0
+win_pos = NodePath("../../Jawaban/Strawberi")
+
+[node name="Label" type="Button" parent="ButtonDrag/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Strawberi"
+script = ExtResource("5_jlpd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button/Label"]
+stream = ExtResource("6_cbn6v")
+bus = &"Dialog"
+
+[node name="Button2" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_72er6")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -704.0
+offset_right = 1400.0
+offset_bottom = -576.0
+win_pos = NodePath("../../Jawaban/Jeruk")
+
+[node name="Label2" type="Button" parent="ButtonDrag/Button2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Jeruk"
+script = ExtResource("5_jlpd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button2/Label2"]
+stream = ExtResource("7_5ooeq")
+bus = &"Dialog"
+
+[node name="Button3" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_72er6")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -448.0
+offset_right = 1400.0
+offset_bottom = -320.0
+win_pos = NodePath("../../Jawaban/Anggur")
+
+[node name="Label3" type="Button" parent="ButtonDrag/Button3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Anggur"
+script = ExtResource("5_jlpd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button3/Label3"]
+stream = ExtResource("8_jsrm0")
+bus = &"Dialog"
+
+[node name="Button4" parent="ButtonDrag" node_paths=PackedStringArray("win_pos") instance=ExtResource("4_72er6")]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = -192.0
+offset_right = 1400.0
+offset_bottom = -64.0
+win_pos = NodePath("../../Jawaban/Apel")
+
+[node name="Label4" type="Button" parent="ButtonDrag/Button4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -64.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_vertical = 2
+pivot_offset = Vector2(312, 64)
+text = "Apel"
+script = ExtResource("5_jlpd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ButtonDrag/Button4/Label4"]
+stream = ExtResource("9_l81ri")
+bus = &"Dialog"
+
+[node name="Jawaban" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1040.0
+offset_right = 40.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="Strawberi" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -384)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Strawberi" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Strawberi/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Strawberi"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("3_q1w3v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Strawberi"]
+z_index = 1
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("3_q1w3v")
+
+[node name="Jeruk" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -128)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Jeruk" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Jeruk/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Jeruk"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("4_ot0w2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Jeruk"]
+z_index = 1
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("4_ot0w2")
+
+[node name="Apel" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -640)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Apel" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Apel/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Apel"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.365, 0.365)
+texture = ExtResource("5_qsfik")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Apel"]
+z_index = 1
+scale = Vector2(0.365, 0.365)
+texture = ExtResource("5_qsfik")
+
+[node name="Anggur" type="Sprite2D" parent="Jawaban"]
+position = Vector2(2016, -904)
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Jawaban/Anggur" groups=["jawaban"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jawaban/Anggur/StaticBody2D"]
+shape = SubResource("RectangleShape2D_tnpmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jawaban/Anggur"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.6)
+z_index = 1
+position = Vector2(18.6, 18.6)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("6_vh78n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jawaban/Anggur"]
+z_index = 1
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("6_vh78n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 64.0
+offset_right = 780.0
+offset_bottom = 505.0
+text = "Sambugkan Kata 
+kata ini dengan 
+soal yang sudah 
+ditentukan"
+label_settings = SubResource("LabelSettings_gx5gw")
+
+[node name="NextButton" parent="." node_paths=PackedStringArray("affirmation_dialogue") instance=ExtResource("6_84vr0")]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 816.0
+offset_right = 694.0
+offset_bottom = 966.0
+theme = ExtResource("3_5k3jv")
+text = "   Level Selanjutnya"
+icon = ExtResource("7_ivjmg")
+icon_alignment = 2
+get_win = true
+next_level = "res://Scnee/Level/Buah/Level2/drag_an_drop_buah_2.tscn"
+affirmation = true
+affirmation_dialogue = NodePath("../Dialogue")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_f6wws")
+autoplay = true
+bus = &"Dialog"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="CanvasLayer" instance=ExtResource("18_5ooeq")]
+custom_minimum_size = Vector2(120.08, 129.75)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 144.08
+offset_bottom = 153.75
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsrm0")
+expand_icon = false
+path_to = "res://Scnee/Level/Buah/KotaBuah/kota_buah.tscn"
+
+[node name="Dialogue" parent="." instance=ExtResource("19_l81ri")]
+layout_mode = 1
+array_dialog = Array[String](["Iya! Kamu Benar!"])
+array_voice = Array[AudioStream]([ExtResource("20_816s4")])
+on_start_dialogue = false
+change_scnee_end = true

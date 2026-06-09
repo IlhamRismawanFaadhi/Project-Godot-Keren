@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://djj2mmvshalbq"]
+
+[ext_resource type="Texture2D" uid="uid://dx3hfe60g5xth" path="res://Assets/Sprite/Icon/PNG/Basic/Double/navigation_e.png" id="1_n7vp7"]
+[ext_resource type="Script" uid="uid://btielesi5tyyj" path="res://Materi/DragAnDrop/Script/Button.gd" id="2_1nnfr"]
+[ext_resource type="Script" uid="uid://b8k3waxwpowlj" path="res://Materi/DragAnDrop/Script/snapped_area.gd" id="4_0fge3"]
+[ext_resource type="Texture2D" uid="uid://b074vi8ett0o7" path="res://icon.svg" id="4_g6hnh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgwi0"]
+radius = 32.9848
+
+[node name="Button" type="Button"]
+z_index = 2
+offset_right = 128.0
+offset_bottom = 128.0
+pivot_offset = Vector2(64, 64)
+icon = ExtResource("1_n7vp7")
+icon_alignment = 1
+script = ExtResource("2_1nnfr")
+
+[node name="SnappedArea" type="Area2D" parent="." node_paths=PackedStringArray("center_pos")]
+position = Vector2(64, 64)
+script = ExtResource("4_0fge3")
+center_pos = NodePath("../Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnappedArea"]
+shape = SubResource("CircleShape2D_qgwi0")
+
+[node name="TextureButton" type="TextureButton" parent="SnappedArea"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(64, 64)
+mouse_filter = 1
+stretch_mode = 3
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = -1
+position = Vector2(64, 64)
+points = PackedVector2Array(0, 0, 0, 0)
+width = 20.0
+default_color = Color(0.0357244, 0.543809, 0.57204, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(276, -52)
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(64, 64)
+texture = ExtResource("4_g6hnh")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="body_entered" from="SnappedArea" to="SnappedArea" method="_on_body_entered"]
+[connection signal="body_exited" from="SnappedArea" to="SnappedArea" method="_on_body_exited"]
+[connection signal="pressed" from="SnappedArea/TextureButton" to="SnappedArea" method="_on_texture_button_pressed"]

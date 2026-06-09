@@ -1,0 +1,40 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bwfygcjpb4d3t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mavax"]
+bg_color = Color(0.65098, 0.92549, 0.827451, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 95
+corner_radius_top_right = 95
+expand_margin_bottom = 50.0
+shadow_color = Color(0, 0, 0, 0.290196)
+shadow_size = 11
+shadow_offset = Vector2(0, 17.875)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k072t"]
+bg_color = Color(0.709931, 0.915565, 0.779163, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+corner_radius_top_left = 95
+corner_radius_top_right = 95
+expand_margin_bottom = 50.0
+shadow_color = Color(0, 0, 0, 0.290196)
+shadow_size = 11
+shadow_offset = Vector2(0, 17.875)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_mavax")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_mavax")
+Button/styles/focus = SubResource("StyleBoxFlat_mavax")
+Button/styles/hover = SubResource("StyleBoxFlat_k072t")
+Button/styles/hover_mirrored = SubResource("StyleBoxFlat_k072t")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_k072t")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_k072t")
+Button/styles/normal = SubResource("StyleBoxFlat_mavax")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_mavax")
+Button/styles/pressed = SubResource("StyleBoxFlat_mavax")
+Button/styles/pressed_mirrored = SubResource("StyleBoxFlat_mavax")

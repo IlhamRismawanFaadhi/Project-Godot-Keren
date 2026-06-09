@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl0fs73c2itlp"
+path="res://.godot/imported/Dari kata Gajah.mp3-f85b6dc6bf5cd31970491b67ffe99584.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Hewan/Level1/Dari kata Gajah.mp3"
+dest_files=["res://.godot/imported/Dari kata Gajah.mp3-f85b6dc6bf5cd31970491b67ffe99584.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,64 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="GameTK"
+config/version="1.0"
+run/main_scene="res://Scnee/Login/login.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://1x1.png"
+config/icon="uid://dist72ymc3dpk"
+
+[audio]
+
+buses/default_bus_layout="uid://ift8u27eyall"
+
+[autoload]
+
+Global="*res://Universal/Script/Global.gd"
+Transition="*res://Universal/Scnee/Transition/transition.tscn"
+
+[display]
+
+window/size/viewport_width=2400
+window/size/viewport_height=1080
+window/size/window_width_override=1200
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Assets/Sound/Dialog/Perempuan/Buah/": "orange",
+"res://Assets/Sound/Dialog/Perempuan/Hewan/": "yellow",
+"res://Assets/Sound/Dialog/Perempuan/Kendaraan/": "blue",
+"res://Assets/Sound/Dialog/Perempuan/Matematika/": "purple",
+"res://Materi/": "pink",
+"res://Scnee/": "orange",
+"res://UI/": "green",
+"res://Universal/": "teal"
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2

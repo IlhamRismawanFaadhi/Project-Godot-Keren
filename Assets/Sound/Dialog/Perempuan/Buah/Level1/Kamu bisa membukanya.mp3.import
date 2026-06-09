@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyudexmgn466e"
+path="res://.godot/imported/Kamu bisa membukanya.mp3-3ea8cd1a21d916f1f1dfbca0daa87fb9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Kamu bisa membukanya.mp3"
+dest_files=["res://.godot/imported/Kamu bisa membukanya.mp3-3ea8cd1a21d916f1f1dfbca0daa87fb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

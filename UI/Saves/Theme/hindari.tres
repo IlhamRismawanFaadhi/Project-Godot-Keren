@@ -1,0 +1,46 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://csw37rmyyacid"]
+
+[sub_resource type="Gradient" id="Gradient_v0w28"]
+offsets = PackedFloat32Array(0.213542, 0.286458, 0.661458, 0.677083)
+colors = PackedColorArray(0.340242, 0.470112, 0.0910551, 1, 0.888433, 0.888433, 0.888433, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hn4tj"]
+gradient = SubResource("Gradient_v0w28")
+width = 96
+height = 96
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_3ccby"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.385417, 0.526042)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7g7fy"]
+gradient = SubResource("Gradient_3ccby")
+width = 44
+height = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lwl1h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjgd2"]
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+shadow_size = 65
+
+[resource]
+HSlider/icons/grabber = SubResource("GradientTexture2D_hn4tj")
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_hn4tj")
+HSlider/icons/tick = SubResource("GradientTexture2D_7g7fy")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_lwl1h")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_lwl1h")
+HSlider/styles/slider = SubResource("StyleBoxFlat_qjgd2")

@@ -1,0 +1,385 @@
+[gd_scene load_steps=24 format=3 uid="uid://cxlyf8ngupc6w"]
+
+[ext_resource type="Script" uid="uid://dc7rvrq5284la" path="res://Scnee/Winner/Script/winner.gd" id="1_5vevp"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="2_c3hgq"]
+[ext_resource type="Texture2D" uid="uid://534ikyuqqmrw" path="res://Assets/Sprite/Icon/PNG/2x/trophy.png" id="3_0si34"]
+[ext_resource type="Texture2D" uid="uid://byrrc6145rjec" path="res://Assets/Sprite/Icon/PNG/2x/locked.png" id="4_ctrw5"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="5_k11q8"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="6_68baa"]
+[ext_resource type="AudioStream" uid="uid://cdv37g7m560v2" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Selamat kamu berhasil.mp3" id="7_wj46g"]
+[ext_resource type="AudioStream" uid="uid://dyudexmgn466e" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Kamu bisa membukanya.mp3" id="8_m3n1i"]
+
+[sub_resource type="Gradient" id="Gradient_e8h1k"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.00543478, 0.71)
+colors = PackedColorArray(0.898039, 0.929412, 0.839216, 1, 0.898039, 0.929412, 0.839216, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_per0d"]
+gradient = SubResource("Gradient_e8h1k")
+width = 250
+height = 250
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_ntfn4"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.00543478, 0.71)
+colors = PackedColorArray(0.827451, 0.870588, 0.752941, 1, 0.898039, 0.929412, 0.839216, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_74fkl"]
+gradient = SubResource("Gradient_ntfn4")
+width = 670
+height = 670
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_jleo3"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.538043)
+colors = PackedColorArray(0.227451, 0.258824, 0.164706, 0.462745, 0.827451, 0.870588, 0.752941, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ptaji"]
+gradient = SubResource("Gradient_jleo3")
+width = 600
+height = 600
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf48a"]
+bg_color = Color(0.470588, 0.52549, 0.780392, 1)
+border_width_bottom = 15
+border_color = Color(0.662745, 0.709804, 0.87451, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoflx"]
+bg_color = Color(0.478775, 0.653786, 0.476728, 1)
+border_width_bottom = 15
+border_color = Color(0.618913, 0.791509, 0.61764, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccwhb"]
+bg_color = Color(0.996369, 0.329156, 0.416406, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.820354, 0.814118, 0.617346, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_offset = Vector2(-7.995, 16.05)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p7m1"]
+font = ExtResource("5_k11q8")
+font_size = 51
+font_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[sub_resource type="Gradient" id="Gradient_47e1k"]
+offsets = PackedFloat32Array(0.540179, 1)
+colors = PackedColorArray(0.154725, 0.508922, 0, 0, 0, 0, 0, 0.286275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_68baa"]
+gradient = SubResource("Gradient_47e1k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_m1fgr"]
+offsets = PackedFloat32Array(0.559783, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.47451)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r4tfs"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wj46g"]
+color_ramp = SubResource("Gradient_m1fgr")
+noise = SubResource("FastNoiseLite_r4tfs")
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5vevp")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.94902, 0.94902, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.960784, 0.964706, 0.941176, 1)
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Bukit" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Bukit"]
+layout_mode = 0
+offset_left = 1043.0
+offset_top = 348.0
+offset_right = 1293.0
+offset_bottom = 598.0
+scale = Vector2(4.39623, 2.68247)
+texture = SubResource("GradientTexture2D_per0d")
+
+[node name="TextureRect9" type="TextureRect" parent="Control/Bukit"]
+layout_mode = 0
+offset_left = -466.0
+offset_top = 320.0
+offset_right = -216.0
+offset_bottom = 570.0
+scale = Vector2(4.39623, 2.68247)
+texture = SubResource("GradientTexture2D_per0d")
+
+[node name="TextureRect10" type="TextureRect" parent="Control/Bukit"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 360.0
+offset_right = 414.0
+offset_bottom = 610.0
+scale = Vector2(4.39623, 2.68247)
+texture = SubResource("GradientTexture2D_per0d")
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Bukit"]
+layout_mode = 0
+offset_left = 1752.0
+offset_top = 312.0
+offset_right = 2002.0
+offset_bottom = 562.0
+scale = Vector2(2.54947, 1.73695)
+texture = SubResource("GradientTexture2D_per0d")
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Bukit"]
+layout_mode = 0
+offset_left = 2112.0
+offset_top = 432.0
+offset_right = 2362.0
+offset_bottom = 682.0
+scale = Vector2(2.54947, 1.73695)
+texture = SubResource("GradientTexture2D_per0d")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 523.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.827451, 0.870588, 0.752941, 1)
+
+[node name="TextureRect8" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -335.0
+offset_top = -490.0
+offset_right = 335.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(5.83654, 1.43783)
+pivot_offset = Vector2(335, 335)
+texture = SubResource("GradientTexture2D_74fkl")
+metadata/_edit_lock_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Control"]
+position = Vector2(176, 628)
+color = Color(0.784314, 0.843137, 0.709804, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Control"]
+position = Vector2(648, 546)
+color = Color(0.784314, 0.843137, 0.709804, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Control"]
+position = Vector2(1240, 524)
+color = Color(0.784314, 0.843137, 0.709804, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Control"]
+position = Vector2(1944, 573)
+color = Color(0.784314, 0.843137, 0.709804, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Control"]
+position = Vector2(2280, 628)
+color = Color(0.784314, 0.843137, 0.709804, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Bus2" type="Sprite2D" parent="Control"]
+texture_filter = 3
+position = Vector2(1193, 661)
+scale = Vector2(1.25955, 0.115237)
+texture = SubResource("GradientTexture2D_ptaji")
+
+[node name="Button" parent="." instance=ExtResource("2_c3hgq")]
+custom_minimum_size = Vector2(352.74, 148.555)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -103.0
+offset_right = 259.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hoflx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_tf48a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf48a")
+text = ""
+icon = ExtResource("3_0si34")
+icon_alignment = 1
+expand_icon = true
+get_win = true
+next_level = "res://Scnee/Level/Kendaraan/KotaKendaraan/kota_kendaraan.tscn"
+get_reward = true
+jenis_reward = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -109.0
+offset_right = 260.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ccwhb")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -76.0
+offset_right = 176.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ctrw5")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -111.0
+offset_right = 920.0
+offset_bottom = 111.0
+grow_vertical = 2
+text = "Goyangkan HP 
+mu untuk membuka 
+piala yang terkunci ini"
+label_settings = SubResource("LabelSettings_0p7m1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_68baa")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_wj46g")
+metadata/_edit_lock_ = true
+
+[node name="Dialogue" parent="." instance=ExtResource("6_68baa")]
+layout_mode = 1
+array_dialog = Array[String](["Selamat kamu berhasil", "Kamu bisa membukanya dengan menggoyangkan handphone kamu"])
+array_voice = Array[AudioStream]([ExtResource("7_wj46g"), ExtResource("8_m3n1i")])

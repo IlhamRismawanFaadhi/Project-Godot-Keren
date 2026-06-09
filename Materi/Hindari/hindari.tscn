@@ -1,0 +1,547 @@
+[gd_scene load_steps=30 format=3 uid="uid://c2evvdvi26f1k"]
+
+[ext_resource type="Theme" uid="uid://csw37rmyyacid" path="res://UI/Saves/Theme/hindari.tres" id="1_b607n"]
+[ext_resource type="Texture2D" uid="uid://e5xyunfysnfm" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_45.png" id="2_1j5e4"]
+[ext_resource type="Texture2D" uid="uid://bgsxfnq2bijh" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_13.png" id="3_desd1"]
+[ext_resource type="Texture2D" uid="uid://duvve8yco70eb" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_10.png" id="4_d6afh"]
+[ext_resource type="Texture2D" uid="uid://dvgr2063grtdg" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_01.png" id="5_6uo43"]
+[ext_resource type="Texture2D" uid="uid://cnbiaenk7kkrw" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_33.png" id="6_igp7q"]
+[ext_resource type="Texture2D" uid="uid://dukrv17cdaffu" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_14.png" id="7_dkp3r"]
+[ext_resource type="Texture2D" uid="uid://c1gv7ran47d7n" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_15.png" id="8_1onjw"]
+[ext_resource type="Texture2D" uid="uid://cl2p7uxqhapte" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_29.png" id="9_08f8f"]
+[ext_resource type="Texture2D" uid="uid://njglvqmcwki3" path="res://Assets/Sprite/Road/RoadSprite/roadTexture_46.png" id="10_1uyql"]
+[ext_resource type="Texture2D" uid="uid://cnqpfccjerfoy" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 1/Group 9.png" id="11_1j5e4"]
+[ext_resource type="Texture2D" uid="uid://gmnvsr1mvtnm" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 5/Frame 52-1.png" id="11_dkp3r"]
+[ext_resource type="Texture2D" uid="uid://cmgukl6vowish" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 2/Group 7-1.png" id="13_1onjw"]
+[ext_resource type="Texture2D" uid="uid://csljwxccywayw" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 3/Group 9-1.png" id="14_08f8f"]
+[ext_resource type="Texture2D" uid="uid://c1jbrksj4jksh" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 2/Group 8-1.png" id="15_1uyql"]
+[ext_resource type="Texture2D" uid="uid://b1fmph3cbs2k4" path="res://Assets/Sprite/Road/RoadSign/Road Signs Type 3/Group 10-4.png" id="16_t3syf"]
+
+[sub_resource type="Gradient" id="Gradient_pl57b"]
+offsets = PackedFloat32Array(0.532609, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.113725)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_08f8f"]
+gradient = SubResource("Gradient_pl57b")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_pqc1u"]
+offsets = PackedFloat32Array(0.652174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.627451, 0.627451, 0.627451, 0.298039)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1udfk"]
+frequency = 0.7197
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_74ytj"]
+color_ramp = SubResource("Gradient_pqc1u")
+noise = SubResource("FastNoiseLite_1udfk")
+
+[sub_resource type="Gradient" id="Gradient_desd1"]
+colors = PackedColorArray(0.429451, 0.51165, 0.524301, 1, 0.865813, 0.887589, 0.887482, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d6afh"]
+gradient = SubResource("Gradient_desd1")
+width = 13
+height = 99
+
+[sub_resource type="Gradient" id="Gradient_6uo43"]
+offsets = PackedFloat32Array(0.902174, 1)
+colors = PackedColorArray(0.982088, 0.917321, 0.864775, 1, 0.353936, 0.428474, 0.439945, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_igp7q"]
+gradient = SubResource("Gradient_6uo43")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.958333, 0.0416667)
+metadata/_snap_enabled = true
+metadata/_snap_count = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkp3r"]
+bg_color = Color(0.984314, 0.847059, 0.647059, 0)
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+border_color = Color(0.684963, 0.614704, 0.388066, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 29.0
+expand_margin_top = 29.0
+expand_margin_right = 29.0
+expand_margin_bottom = 29.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_size = 35
+shadow_offset = Vector2(11.24, 10.555)
+anti_aliasing_size = 3.039
+
+[sub_resource type="Gradient" id="Gradient_x33em"]
+offsets = PackedFloat32Array(0, 0.369565)
+colors = PackedColorArray(0.945645, 0.726926, 0.513598, 1, 0.914326, 0.67161, 0.461287, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wf8wh"]
+noise_type = 2
+frequency = 0.1175
+offset = Vector3(52.63, 0, 0)
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1onjw"]
+height = 352
+color_ramp = SubResource("Gradient_x33em")
+noise = SubResource("FastNoiseLite_wf8wh")
+
+[node name="Hindari" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b607n")
+
+[node name="BG" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.74902, 0.560784, 1)
+
+[node name="Road" type="Marker2D" parent="."]
+position = Vector2(1200, 418)
+scale = Vector2(0.79985, 0.79985)
+
+[node name="Sprite2D" type="Sprite2D" parent="Road"]
+position = Vector2(-952.596, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("2_1j5e4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Road"]
+position = Vector2(-760.596, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Road"]
+position = Vector2(-568.596, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Road"]
+position = Vector2(-376.596, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("4_d6afh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Road"]
+position = Vector2(-376.596, 20.1716)
+scale = Vector2(3, 3)
+texture = ExtResource("5_6uo43")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Road"]
+position = Vector2(-376.596, -363.828)
+scale = Vector2(3, 3)
+texture = ExtResource("6_igp7q")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Road"]
+position = Vector2(-184.596, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Road"]
+position = Vector2(7.40381, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Road"]
+position = Vector2(-376.596, 212.172)
+scale = Vector2(3, 3)
+texture = ExtResource("7_dkp3r")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Road"]
+position = Vector2(-184.596, 212.172)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Road"]
+position = Vector2(7.40381, 212.172)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Road"]
+position = Vector2(199.404, 212.172)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Road"]
+position = Vector2(391.404, 212.172)
+scale = Vector2(3, 3)
+texture = ExtResource("8_1onjw")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Road"]
+position = Vector2(391.404, 20.1716)
+scale = Vector2(3, 3)
+texture = ExtResource("5_6uo43")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Road"]
+position = Vector2(391.404, -171.828)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("9_08f8f")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Road"]
+position = Vector2(199.404, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Road"]
+position = Vector2(583.404, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("3_desd1")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Road"]
+position = Vector2(775.404, -171.828)
+scale = Vector2(3, 3)
+texture = ExtResource("8_1onjw")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Road"]
+position = Vector2(775.404, -363.828)
+scale = Vector2(3, 3)
+texture = ExtResource("7_dkp3r")
+flip_v = true
+
+[node name="Sprite2D20" type="Sprite2D" parent="Road"]
+position = Vector2(967.404, -363.828)
+scale = Vector2(3, 3)
+texture = ExtResource("10_1uyql")
+
+[node name="Grass" type="Polygon2D" parent="Road"]
+position = Vector2(-1035.6, 29.1715)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass2" type="Polygon2D" parent="Road"]
+position = Vector2(-172.532, 87.5164)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass3" type="Polygon2D" parent="Road"]
+position = Vector2(-727.636, -363.818)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass4" type="Polygon2D" parent="Road"]
+position = Vector2(592.611, -315.059)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass5" type="Polygon2D" parent="Road"]
+position = Vector2(1033.94, -78.7648)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass6" type="Polygon2D" parent="Road"]
+position = Vector2(1173.97, -390.073)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass7" type="Polygon2D" parent="Road"]
+position = Vector2(230.043, 102.519)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="Grass8" type="Polygon2D" parent="Road"]
+position = Vector2(-547.603, 202.538)
+scale = Vector2(0.778894, 0.778894)
+color = Color(0, 0.552521, 0.383404, 1)
+antialiased = true
+polygon = PackedVector2Array(-64, 0, 64, 0, 48, -64, 24, -40, 0, -88, -24, -40, -48, -64)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_08f8f")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_74ytj")
+
+[node name="Sprite2D24" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+position = Vector2(898.78, 587.705)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("11_dkp3r")
+
+[node name="Sprite2D25" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+position = Vector2(1513.06, 587.705)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("11_dkp3r")
+
+[node name="Sprite2D21" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+position = Vector2(898.78, 280.563)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("11_dkp3r")
+
+[node name="Sprite2D22" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+position = Vector2(1513.06, 280.563)
+rotation = 1.5708
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("11_dkp3r")
+
+[node name="Sprite2D23" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+position = Vector2(1820.21, 280.563)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("11_dkp3r")
+
+[node name="RoadSign" type="Marker2D" parent="."]
+visible = false
+position = Vector2(800, 384)
+scale = Vector2(1.104, 1.104)
+
+[node name="Sprite2D" type="Sprite2D" parent="RoadSign"]
+texture = SubResource("GradientTexture2D_d6afh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="RoadSign"]
+visible = false
+modulate = Color(0.00566115, 0.00566115, 0.00566115, 1)
+position = Vector2(0, -80)
+scale = Vector2(0.134749, 0.134749)
+texture = ExtResource("11_1j5e4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="RoadSign"]
+position = Vector2(0, -80)
+rotation = 0.785249
+texture = SubResource("GradientTexture2D_igp7q")
+
+[node name="RoadSign2" type="Marker2D" parent="."]
+visible = false
+position = Vector2(1420, 328)
+scale = Vector2(1.104, 1.104)
+
+[node name="Sprite2D" type="Sprite2D" parent="RoadSign2"]
+texture = SubResource("GradientTexture2D_d6afh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="RoadSign2"]
+visible = false
+modulate = Color(0.00566115, 0.00566115, 0.00566115, 1)
+position = Vector2(0, -80)
+scale = Vector2(0.134749, 0.134749)
+texture = ExtResource("11_1j5e4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="RoadSign2"]
+position = Vector2(0, -80)
+rotation = 0.785249
+texture = SubResource("GradientTexture2D_igp7q")
+
+[node name="RoadSign3" type="Marker2D" parent="."]
+visible = false
+position = Vector2(1733, 144)
+scale = Vector2(1.104, 1.104)
+
+[node name="Sprite2D" type="Sprite2D" parent="RoadSign3"]
+texture = SubResource("GradientTexture2D_d6afh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="RoadSign3"]
+visible = false
+modulate = Color(0.00566115, 0.00566115, 0.00566115, 1)
+position = Vector2(0, -80)
+scale = Vector2(0.134749, 0.134749)
+texture = ExtResource("11_1j5e4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="RoadSign3"]
+position = Vector2(0, -80)
+rotation = 0.785249
+texture = SubResource("GradientTexture2D_igp7q")
+
+[node name="PapanTulis" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -377.0
+offset_right = -26.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dkp3r")
+
+[node name="TextureRect" type="TextureRect" parent="PapanTulis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_1onjw")
+
+[node name="Pilihan" type="Control" parent="PapanTulis/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+modulate = Color(0.121569, 0.121569, 0.121569, 0.223529)
+layout_mode = 2
+offset_left = 293.0
+offset_top = 65.483
+offset_right = 539.322
+offset_bottom = 311.483
+texture = ExtResource("13_1onjw")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+modulate = Color(0.121569, 0.121569, 0.121569, 0.223529)
+layout_mode = 2
+offset_left = 694.0
+offset_top = 65.483
+offset_right = 940.965
+offset_bottom = 311.483
+texture = ExtResource("14_08f8f")
+expand_mode = 3
+flip_h = true
+flip_v = true
+
+[node name="TextureRect3" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+modulate = Color(0.121569, 0.121569, 0.121569, 0.223529)
+layout_mode = 2
+offset_left = 1095.0
+offset_top = 65.483
+offset_right = 1341.96
+offset_bottom = 311.483
+rotation = -1.5708
+pivot_offset = Vector2(123.483, 123)
+texture = ExtResource("14_08f8f")
+expand_mode = 3
+flip_h = true
+flip_v = true
+
+[node name="TextureRect4" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+modulate = Color(0.121569, 0.121569, 0.121569, 0.223529)
+layout_mode = 2
+offset_left = 1496.0
+offset_top = 65.483
+offset_right = 1742.32
+offset_bottom = 311.483
+texture = ExtResource("15_1uyql")
+expand_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+modulate = Color(0.121569, 0.121569, 0.121569, 0.223529)
+layout_mode = 2
+offset_left = 1897.0
+offset_top = 65.483
+offset_right = 2143.96
+offset_bottom = 311.483
+rotation = 1.5708
+pivot_offset = Vector2(123.483, 123)
+texture = ExtResource("16_t3syf")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+layout_mode = 2
+offset_left = 275.0
+offset_top = 52.0
+offset_right = 521.322
+offset_bottom = 298.0
+texture = ExtResource("13_1onjw")
+expand_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+layout_mode = 2
+offset_left = 676.0
+offset_top = 52.0
+offset_right = 922.965
+offset_bottom = 298.0
+texture = ExtResource("14_08f8f")
+expand_mode = 3
+flip_h = true
+flip_v = true
+
+[node name="TextureRect8" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+layout_mode = 2
+offset_left = 1077.0
+offset_top = 52.0
+offset_right = 1323.96
+offset_bottom = 298.0
+rotation = -1.5708
+pivot_offset = Vector2(123.483, 123)
+texture = ExtResource("14_08f8f")
+expand_mode = 3
+flip_h = true
+flip_v = true
+
+[node name="TextureRect9" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+layout_mode = 2
+offset_left = 1478.0
+offset_top = 52.0
+offset_right = 1724.32
+offset_bottom = 298.0
+texture = ExtResource("15_1uyql")
+expand_mode = 3
+
+[node name="TextureRect10" type="TextureRect" parent="PapanTulis/TextureRect/Pilihan"]
+layout_mode = 2
+offset_left = 1879.0
+offset_top = 52.0
+offset_right = 2125.96
+offset_bottom = 298.0
+rotation = 1.5708
+pivot_offset = Vector2(123.483, 123)
+texture = ExtResource("16_t3syf")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="PapanTulis/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_08f8f")
+metadata/_edit_lock_ = true

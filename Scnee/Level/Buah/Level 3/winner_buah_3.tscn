@@ -1,0 +1,209 @@
+[gd_scene load_steps=16 format=3 uid="uid://bsl1ru8yt0gue"]
+
+[ext_resource type="Script" uid="uid://dc7rvrq5284la" path="res://Scnee/Winner/Script/winner.gd" id="1_l1iev"]
+[ext_resource type="Texture2D" uid="uid://cl38ntagut8df" path="res://Assets/Sprite/Patren/Vector/pattern_83.svg" id="2_r7wm7"]
+[ext_resource type="PackedScene" uid="uid://ihlblnk3lt00" path="res://Materi/PilihJawaban/button.tscn" id="3_ywwxa"]
+[ext_resource type="Texture2D" uid="uid://534ikyuqqmrw" path="res://Assets/Sprite/Icon/PNG/2x/trophy.png" id="4_m1j24"]
+[ext_resource type="Texture2D" uid="uid://byrrc6145rjec" path="res://Assets/Sprite/Icon/PNG/2x/locked.png" id="5_lhf38"]
+[ext_resource type="FontVariation" uid="uid://bunmsetoica12" path="res://UI/Saves/Font/new_font_variation.tres" id="6_iir30"]
+[ext_resource type="Texture2D" uid="uid://dbxdhhfvrjiwp" path="res://Assets/Sprite/Buah/GambarBuah/Lemon.png" id="7_pfttj"]
+[ext_resource type="Texture2D" uid="uid://chk7wga6txia1" path="res://Assets/Sprite/Buah/GambarBuah/leaf(1).png" id="8_f8lch"]
+[ext_resource type="PackedScene" uid="uid://bc2ptk5lt4xca" path="res://Assets/dialogue.tscn" id="9_lx17h"]
+[ext_resource type="AudioStream" uid="uid://cdv37g7m560v2" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Selamat kamu berhasil.mp3" id="10_q7fbb"]
+[ext_resource type="AudioStream" uid="uid://dyudexmgn466e" path="res://Assets/Sound/Dialog/Perempuan/Buah/Level1/Kamu bisa membukanya.mp3" id="11_ugag0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gjmr"]
+bg_color = Color(0.478775, 0.653786, 0.476728, 1)
+border_width_bottom = 15
+border_color = Color(0.618913, 0.791509, 0.61764, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h77fj"]
+bg_color = Color(0.470588, 0.52549, 0.780392, 1)
+border_width_bottom = 15
+border_color = Color(0.662745, 0.709804, 0.87451, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 11
+shadow_offset = Vector2(-11.225, 15.1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yanet"]
+bg_color = Color(0.996369, 0.329156, 0.416406, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.820354, 0.814118, 0.617346, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_offset = Vector2(-7.995, 16.05)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dtdsr"]
+font = ExtResource("6_iir30")
+font_size = 51
+font_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l1iev")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.94902, 0.94902, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.109804)
+self_modulate = Color(0.650128, 0.650128, 0.650128, 1)
+layout_mode = 0
+offset_right = 907.0
+offset_bottom = 581.0
+scale = Vector2(2.646, 1.859)
+texture = ExtResource("2_r7wm7")
+stretch_mode = 1
+
+[node name="Button" parent="." instance=ExtResource("3_ywwxa")]
+custom_minimum_size = Vector2(352.74, 148.555)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -103.0
+offset_right = 259.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2gjmr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h77fj")
+text = ""
+icon = ExtResource("4_m1j24")
+icon_alignment = 1
+expand_icon = true
+get_win = true
+next_level = "res://Scnee/Level/Buah/KotaBuah/kota_buah.tscn"
+get_reward = true
+index_reward = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -109.0
+offset_right = 260.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yanet")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -76.0
+offset_right = 176.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_lhf38")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -111.0
+offset_right = 920.0
+offset_bottom = 111.0
+grow_vertical = 2
+text = "Goyangkan HP 
+mu untuk membuka 
+piala yang terkunci ini"
+label_settings = SubResource("LabelSettings_dtdsr")
+
+[node name="Lemon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.317647)
+position = Vector2(68, 237)
+texture = ExtResource("7_pfttj")
+
+[node name="Leaf(1)" type="Sprite2D" parent="Lemon"]
+position = Vector2(-8, -176)
+scale = Vector2(1.08786, 1.08786)
+texture = ExtResource("8_f8lch")
+
+[node name="Lemon2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.317647)
+position = Vector2(2332, 237)
+texture = ExtResource("7_pfttj")
+flip_h = true
+
+[node name="Leaf(1)" type="Sprite2D" parent="Lemon2"]
+position = Vector2(-8, -176)
+scale = Vector2(1.08786, 1.08786)
+texture = ExtResource("8_f8lch")
+flip_h = true
+flip_v = true
+
+[node name="Lemon3" type="Sprite2D" parent="."]
+position = Vector2(80, 216)
+texture = ExtResource("7_pfttj")
+
+[node name="Leaf(1)" type="Sprite2D" parent="Lemon3"]
+position = Vector2(-8, -176)
+scale = Vector2(1.08786, 1.08786)
+texture = ExtResource("8_f8lch")
+
+[node name="Dialogue" parent="." instance=ExtResource("9_lx17h")]
+layout_mode = 1
+array_dialog = Array[String](["Selamat kamu berhasil", "Kamu bisa membukanya dengan menggoyangkan handphone kamu"])
+array_voice = Array[AudioStream]([ExtResource("10_q7fbb"), ExtResource("11_ugag0")])
+
+[node name="Lemon4" type="Sprite2D" parent="."]
+position = Vector2(2344, 216)
+texture = ExtResource("7_pfttj")
+flip_h = true
+
+[node name="Leaf(1)" type="Sprite2D" parent="Lemon4"]
+position = Vector2(-8, -176)
+scale = Vector2(1.08786, 1.08786)
+texture = ExtResource("8_f8lch")
+flip_h = true
+flip_v = true
