@@ -135,11 +135,8 @@ shadow_enabled = true
 [node name="Node3D" type="Node3D" parent="." unique_id=1061089189]
 transform = Transform3D(1, -3.694927e-08, 1.7089727e-07, 0, 0.97741604, 0.21132466, -1.74846e-07, -0.21132466, 0.97741604, 0, 3.8323805, 0)
 
-[node name="SubViewport" type="SubViewport" parent="Node3D" unique_id=1416120100]
-size = Vector2i(2400, 1080)
-
-[node name="Camera3D" type="Camera3D" parent="Node3D/SubViewport" unique_id=314511021]
-transform = Transform3D(1, -3.6949263e-08, 1.7089725e-07, -4.6937526e-16, 0.9774159, 0.21132462, -1.74846e-07, -0.21132462, 0.9774159, 1.2581489e-06, 3.8065147, 7.195754)
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=314511021]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 0.9999999, -2.9802322e-08, 0, 2.9802322e-08, 0.9999999, 2.1375833e-13, -1.5459216, 7.0277777)
 fov = 62.6
 
 [node name="Character" parent="." unique_id=499825257 instance=ExtResource("2_e570w")]
